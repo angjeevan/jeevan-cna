@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CNA Learning Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    overflow-x:hidden;
+    background:#f4f6f9;
+}
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:270px;
+    height:100vh;
+    background:#1e293b;
+    overflow-y:auto;
+}
+
+.sidebar h3{
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-bottom:1px solid #334155;
+}
+
+.sidebar a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:#0ea5e9;
+}
+
+.content{
+    margin-left:270px;
+    padding:20px;
+}
+
+.topbar{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-dashboard{
+    border:none;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card-dashboard:hover{
+    transform:translateY(-5px);
+}
+
+.section{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.section h3{
+    color:#0f172a;
+    border-left:5px solid #0ea5e9;
+    padding-left:10px;
+}
+
+.unit-card{
+    margin-bottom:20px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.content{
+    margin-left:0;
+}
+.cardx{background:#fff;border-radius:12px;padding:20px;margin-top:20px}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h3>
+<i class="fas fa-laptop-code"></i><br>
+21CSE477T-CLOUD NATIVE ARCHITECTURE FOR MODERN PLATFORMS
+</h3>
+
+<a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+<a href="#about"><i class="fas fa-circle-info"></i>About Course</a>
+
+<a href="#syllabus"><i class="fas fa-book"></i> Syllabus</a>
+
+<a href="#lesson"><i class="fas fa-calendar"></i> Lesson Plan</a>
+
+<a href="#obe"><i class="fas fa-bullseye"></i> Outcome Based Education</a>
+
+<a href="#gap"><i class="fas fa-industry"></i> Industry Gap Analysis</a>
+
+<a href="#beyond"><i class="fas fa-lightbulb"></i> Beyond Syllabus</a>
+
+<a href="#materials"><i class="fas fa-folder-open"></i> Learning Materials</a>
+
+<a href="#questionbank"><i class="fas fa-file-alt"></i> Question Bank</a>
+<a href="#mcq"><i class="fas fa-file-alt"></i> MCQ</a>
+<a href="#dd">
+<i class="fa fa-copyright"></i>Design&Deveplop-ANGJ</a>
+
+</div>
+
+<div class="content">
+
+<div class="topbar">
+
+<div class="row">
+<div class="col-md-8">
+<h2>Student Learning Portal</h2>
+<p>CLOUD NATIVE ARCHITECTURE FOR MODERN PLATFORMS - Resource Center</p>
+</div>
+
+<div class="col-md-4">
+<input type="text" class="form-control"
+placeholder="Search Content..."
+id="searchBox">
+</div>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<div class="row mt-4">
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-primary text-white">
+<div class="card-body text-center">
+<h2>5</h2>
+<p>Units</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-success text-white">
+<div class="card-body text-center">
+<h2>45</h2>
+<p>Periods</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-warning text-dark">
+<div class="card-body text-center">
+<h2>5 & 12</h2>
+<p>COs & POs</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-danger text-white">
+<div class="card-body text-center">
+<h2>100+</h2>
+<p>Questions</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+<div id="about" class="cardx">
+<h2>About Course</h2>
+<p align="justify">21CSE477T-Cloud Native Architecture for Modern Platforms  is a professional elective course is designed to provide students with a comprehensive understanding of the architectural principles behind modern application platforms and the best high-level structures for various application types, including web, database, and thick-client systems.</p>
+</div>
+<!-- SYLLABUS -->
+
+<div class="section searchable" id="syllabus">
+
+<h3>Syllabus</h3>
+
+<table class="table table-bordered mt-3">
+<tr>
+<th>Unit</th>
+<th>Topics</th>
+</tr>
+
+<tr>
+<td>Unit I</td>
+<td align="justify"><b>Modern Application Platforms</b> 
+ 
+Introduction to modern application platforms, Introduction concept: distributed systems, Agility:  user stories and acceptance test cases, Modelling: Requirements, Technology: Web, Web Stock and REST,Technology: Synchronous Controllers and asynchronous Web flux mapping- Workshop using user stories, spring boot framework, synchronous controllers, and Asynchronous Web Flux sockets. Ploygot Persistence,Introduction Concept: Distributed Database, Technology: NoSQL and NewSQL Data modellig. Agility: Product Backlog, Modelling: Data, Technology: Mapping to Repositories, Workshop using Document Database 
+and RDBMS. CA Project Instructions briefing, Service Fundamentals Introduction Concept: Cloud Computing Introduction, Agility: Pair Programming, Modelling: user Interface Technology Service design and API 
+end points, Technology: Mapping Entities to Repositories, Workshop using service components, data access components and API endpoints. 
+ </td>
+</tr>
+
+<tr>
+<td>Unit II</td>
+<td align="justify"><b>Full Stack Components</b>Full Stack Components: Introduction Concept: Distributed Service communication, Agility: Test Driven Development, Modelling: Technical Backlog, Technology: Reactive Client-side Technologies, Technology: Build 
+tools and Test automation, Technology: End to End Application Layering, Workshop using Synchronous components and client side. CA Project Mile stone MVP Submission, Cloud Native Reference Architecture, 
+Introduction Concept: Cloud managed services (distributed), Modeling: Architectural Prototype, Technology: Reference Architecture, Technology: Cloud Native Design, Technology: Container Kuberetes part 1. </td>
+</tr>
+
+<tr>
+<td>Unit III</td>
+<td align="justify"><b>Micro Services</b>Micro services Architecture: Introduction Concept: Domain Drive Design, Modelling: Bounded Context, Workshop using end to end layering of components and cloud hosting, and Technology: Element of micro 
+services and implementation mechanism, Technology: Container - Kubernetes part 2, Technology: Inter-micro services communication, Workshop for moving from monolithic to microservices components. CA 
+Project milestone Archetype Submission, Serverless Architecture, Introduction Concept: Function as a service, Modelling: Functions, Technology: Elements of functions and workflow implementation mechanism  </td>
+</tr>
+
+<tr>
+<td>Unit IV</td>
+<td align="justify"><b>Functions and Containers</b>Technology: Functions Vs Containers (Kubernetes vs Kubeless), Technology: Inter-functional communication, Workshop using  serverless functions, Event Driven Architecture, Introduction Concept : Work Queue 
+Systems, Technology : Producer, Consumer and Messages, Technology: Event Brokers versus message Brokers, Technology: Event-Driven Processing, Workshop using Event driven messages (both producers 
+and consumer) and processing the same Design for Scalability, Introduction Concept: Application scaling, Concept: Data Scaling, Caching and Replication, Concept: Distributed systems communication Technology: 
+Container orchestrated scaling and replication. </td>
+</tr>
+
+<tr>
+<td>Unit V</td>
+<td align="justify"><b>Container Hosting</b>Workshop for container hosting, CA project milestone First Iteration Submission, Metrics, Monitoring and Performance Engineering, Introduction Concept: Quality metrics for non-functional Requirements, Concept: 
+Distributed tracing for profiling an monitoring concept: Performance Engineering, Technology: Contain orchestrated scaling and replication, Workshop for performance engineering, Security Architecture for Modern 
+Platforms, Introduction Concept: Distributed Service Security, Modelling: Threat models and SWOT Analysis, Technology: Identity and access management, Technology: Data asset classification and Protection, 
+Technology: Container security,  Workshop for Security Implementation Platform Reliability Engineering, Introduction concept: Distributed service reliability, Technology: Service Level Indicators, Workshop for 
+reliability Implementation.</td>
+</tr>
+<tr>
+<td>Learning Resources</td>
+<td align="justify"><b><ol><li>	Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert C. Martin; published by: Pearson; publication date: September 2017.
+</li> <li>	Johnson, Rod, et al. "The spring framework–reference documentation." interface 21 (2004): 27. 
+</li> <li>	Walls, Craig. Spring in action. Simon and Schuster, 2022.
+</li> <li>White, Joshua, and Willie Wheeler. Spring in practice. Simon and Schuster, 2013. </li> <li> Boduch, Adam, and Roy Derks. React and React Native: A complete hands-on guide to modern web and mobile development with React. js. Packt Publishing Ltd, 2020.</li></ol>
+</td>
+</tr>
+</table>
+
+</div>
+
+<!-- LESSON PLAN -->
+
+<div class="section searchable" id="lesson">
+
+<h3>Lesson Plan</h3>
+
+<table class="table table-striped">
+
+<tr>
+<th>Period</th>
+<th>Topic</th>
+</tr>
+<tr><th>Unit-1</th><th>Modern Application Platforms</th></tr>
+<tr><td>1</td><td>Intro to Modern Platforms & Distributed Systems</td></tr>
+<tr><td>2</td><td>Agility: User Stories & Acceptance Tests</td></tr>
+<tr><td>3</td><td>Modeling: Requirements & Distributed Logic</td></tr>
+<tr><td>4</td><td>Tech: Web Stock, REST & API Endpoints</td></tr>
+<tr><td>5</td><td>Sync Controllers vs Asynchronous Web Flux</td></tr>
+<tr><td>6</td><td>Polyglot Persistence: NoSQL & NewSQL</td></tr>
+<tr><td>7</td><td>Data Modeling & Mapping to Repositories</td></tr>
+<tr><td>8</td><td>Workshop: Document DB & RDBMS Integration</td></tr>
+<tr><td>9</td><td>Workshop: Spring Boot & Web Flux Mapping</td></tr>
+<tr><th>Unit-2</th><th>Full Stack Components</th></tr>
+<tr><td>10</td><td>Distributed Service Communication Intro </td></tr>
+<tr><td>11</td><td>Agility: Test Driven Development (TDD) </td></tr>
+<tr><td>12</td><td>Modeling: Technical Backlog Construction </td></tr>
+<tr><td>13</td><td>Technology: Reactive Client-side Tech </td></tr>
+<tr><td>14</td><td>Build Tools & Test Automation </td></tr>
+<tr><td>15</td><td>End-to-End Application Layering </td></tr>
+<tr><td>16</td><td>Workshop: Synchronous Components & Client </td></tr>
+<tr><td>17</td><td>Cloud Native Reference Architecture </td></tr>
+<tr><td>18</td><td>Technology: Container Kubernetes Part 1 </td></tr>
+<tr><th>Unit-3</th><th>Micro Services</th></tr>
+<tr><td>19</td><td>Intro to Domain-Driven Design (DDD) </td></tr>
+<tr><td>20</td><td>Modeling: Bounded Context </td></tr>
+<tr><td>21</td><td>Workshop: End-to-End Layering & Hosting </td></tr>
+<tr><td>22</td><td>Elements of Microservices & Mechanisms </td></tr>
+<tr><td>23</td><td>Kubernetes Part 2: Advanced Concepts </td></tr>
+<tr><td>24</td><td>Inter-microservice Communication </td></tr>
+<tr><td>25</td><td>Workshop: Monolith to Microservices </td></tr>
+<tr><td>26</td><td>Serverless Architecture & FaaS Concept </td></tr>
+<tr><td>27</td><td>Modeling Functions & Workflow Mechanisms </td></tr>
+<tr><th>Unit-4</th><th>Functions and Containers</th></tr>
+<tr><td>28</td><td>Functions vs Containers (K8s vs Kubeless) </td></tr>
+<tr><td>29</td><td>Inter-functional Communication </td></tr>
+<tr><td>30</td><td>Workshop: Serverless Functions </td></tr>
+<tr><td>31</td><td>Event Driven Architecture: Work Queues</td></tr>
+<tr><td>32</td><td>Producer, Consumer and Messages </td></tr>
+<tr><td>33</td><td>Event Brokers versus Message Brokers </td></tr>
+<tr><td>34</td><td>Workshop: Event-Driven Processing </td></tr>
+<tr><td>35</td><td>Design for Scalability: App & Data Scaling </td></tr>
+<tr><td>36</td><td>Caching and Replication in Distributed Sys </td></tr>
+<tr><th>Unit-5</th><td>Container Hosting</td></tr>
+<tr><td>37</td><td>Workshop: Container Hosting </td></tr>
+<tr><td>38</td><td>Metrics, Monitoring & Quality Metrics </td></tr>
+<tr><td>39</td><td>Distributed Tracing & Performance Eng. </td></tr>
+<tr><td>40</td><td>Workshop: Performance Engineering </td></tr>
+<tr><td>41</td><td>Security Architecture: Threat Models </td></tr>
+<tr><td>42</td><td>Identity & Access Management (IAM) </td></tr>
+<tr><td>43</td><td>Container Security & Data Protection </td></tr>
+<tr><td>44</td><td>Workshop: Security Implementation </td></tr>
+<tr><td>45</td><td>Platform Reliability Engineering (SRE) </td></tr>
+
+</table>
+
+</div>
+
+<!-- OBE -->
+
+<div class="section searchable" id="obe">
+
+<h3>Outcome Based Education (OBE)</h3>
+
+<ul>
+<li>CO1 - demonstrate events, perform state updates, and manage conditional content; Apply styles dynamically 
+and conditionally to create a modern UI .</li>
+<li>CO2 - implement components and stereotypes to satisfy given business requirements that could include both 
+synchronous and asynchronous web applications .</li>
+<li>CO3 - design and implement a scalable polyglot persistence layer including regular star schema and document 
+store .</li>
+<li>CO4 - design independent, composable, loosely coupled services that integrate well with device independent 
+frontend UI components of modern platforms .</li>
+<li>CO5 - build non-functional characteristics such as scalability, performance engineering and security aspects 
+into the solution .</li>
+</ul>
+
+</div>
+
+<!-- GAP -->
+
+<div class="section searchable" id="gap">
+
+<h3>Gap Between Syllabus & Industrial Needs</h3>
+
+<table class="table table-bordered">
+
+<tr>
+<th> Case Study Report</th>
+<th>Background and Scenario </th>
+<th>Proposed Advanced Solution</th>
+</tr>
+
+<tr>
+<td>NanCo Art Services Company</td>
+<td align="justify">NanCo Art Services operates the "ArtPort" application suite (Gallery, Museum, and Consumer versions). As the company expanded globally, users reported severe scalability and performance issues. The applications were built as in-house monoliths, making them expensive to update and slow to load.</td>
+ 
+<td align="justify">The "Refactor and Augment" Strategy Instead of a simple "Lift and Shift," NanCo should adopt a Refactor strategy, breaking the monolith into microservices while using advanced single-node patterns to bridge the gap</td>
+ 
+</tr>
+
+</table>
+
+</div>
+
+<!-- BEYOND SYLLABUS -->
+
+<div class="section searchable" id="beyond">
+
+<h3>Content Beyond Syllabus</h3>
+<p align="justify">
+The current Cloud Native Architecture for Modern Platforms (21CSE477T) syllabus, the course already covers foundational cloud-native technologies such as Spring Boot, ReactJS, Microservices, Kubernetes, Serverless, Event-Driven Architecture, Security, Performance Engineering, and Reliability Engineering.
+However, industry requirements in 2026 have moved beyond traditional cloud-native development. The following Content Beyond Syllabus topics will significantly improve student employability and align with current demands from companies such as Google, Microsoft, Amazon, IBM, Dell, Accenture, Cognizant, Zoho, Infosys, TCS, and VMware.
+</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped table-hover align-middle">
+
+<thead class="table-dark">
+<tr>
+    <th width="5%">S.No</th>
+    <th width="20%">Content Beyond Syllabus Topic</th>
+    <th width="15%">Industry Need / Gap</th>
+    <th width="30%">Topics Covered</th>
+    <th width="15%">Tools / Technologies</th>
+    <th width="15%">Mini Project / Practical</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>1</td>
+    <td><strong>AI-Native Cloud Architecture</strong></td>
+    <td>Modern applications are increasingly AI-powered.</td>
+    <td>
+        • Large Language Models (LLMs)<br>
+        • Generative AI Integration<br>
+        • AI Agents<br>
+        • Retrieval Augmented Generation (RAG)<br>
+        • Vector Databases<br>
+        • Prompt Engineering<br>
+        • AI Microservices
+    </td>
+    <td>
+        OpenAI API<br>
+        LangChain<br>
+        LangGraph<br>
+        Ollama<br>
+        LlamaIndex<br>
+        ChromaDB<br>
+        Pinecone
+    </td>
+    <td>AI-Powered Cloud Helpdesk Assistant</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td><strong>Platform Engineering</strong></td>
+    <td>
+        Kubernetes is covered, but Platform Engineering is not included in the syllabus.
+    </td>
+    <td>
+        • Internal Developer Platforms (IDP)<br>
+        • Golden Path Architecture<br>
+        • Backstage Developer Portal<br>
+        • Self-Service Infrastructure
+    </td>
+    <td>
+        Backstage.io<br>
+        Crossplane<br>
+        Terraform<br>
+        ArgoCD
+    </td>
+    <td>
+        Industry Demand:<br>
+        Spotify, Netflix, Google, VMware
+    </td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td><strong>GitOps & Continuous Delivery</strong></td>
+    <td>
+        Modern cloud deployments require automated CI/CD pipelines.
+    </td>
+    <td>
+        • GitOps Workflow<br>
+        • Infrastructure as Code<br>
+        • Continuous Deployment<br>
+        • Progressive Delivery
+    </td>
+    <td>
+        ArgoCD<br>
+        FluxCD<br>
+        GitHub Actions<br>
+        Jenkins X
+    </td>
+    <td>
+        Deploy a Microservice using GitOps
+    </td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td><strong>Kubernetes Advanced Operations</strong></td>
+    <td>
+        Industry expects advanced Kubernetes administration and orchestration.
+    </td>
+    <td>
+        • Service Mesh<br>
+        • Multi-Cluster Kubernetes<br>
+        • Cluster Federation<br>
+        • Operators<br>
+        • Helm Charts<br>
+        • Kustomize
+    </td>
+    <td>
+        Istio<br>
+        Linkerd<br>
+        Helm<br>
+        Rancher
+    </td>
+    <td>
+        Enterprise Kubernetes Deployment
+    </td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td><strong>Cloud Security & Zero Trust</strong></td>
+    <td>
+        Security is shifting towards Zero Trust Architecture.
+    </td>
+    <td>
+        • Zero Trust Architecture<br>
+        • DevSecOps<br>
+        • API Security<br>
+        • Secrets Management<br>
+        • Software Supply Chain Security
+    </td>
+    <td>
+        Vault<br>
+        Trivy<br>
+        Snyk<br>
+        OWASP ZAP
+    </td>
+    <td>
+        Case Study: SolarWinds Attack
+    </td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td><strong>Cloud FinOps</strong></td>
+    <td>
+        Organizations need cost-optimized cloud infrastructure.
+    </td>
+    <td>
+        • FinOps Framework<br>
+        • Cost Optimization<br>
+        • Resource Tagging<br>
+        • Rightsizing
+    </td>
+    <td>
+        AWS Cost Explorer<br>
+        Azure Cost Management
+    </td>
+    <td>
+        Optimize Kubernetes Cluster Budget
+    </td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td><strong>Observability Engineering</strong></td>
+    <td>
+        Industry requires complete observability beyond monitoring.
+    </td>
+    <td>
+        • Distributed Observability<br>
+        • OpenTelemetry<br>
+        • Log Analytics<br>
+        • Trace Analytics
+    </td>
+    <td>
+        Prometheus<br>
+        Grafana<br>
+        Jaeger<br>
+        Loki
+    </td>
+    <td>
+        Observe a Microservice Architecture
+    </td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td><strong>Event Streaming Platforms</strong></td>
+    <td>
+        Real-time processing is essential in modern enterprises.
+    </td>
+    <td>
+        • Real-Time Data Pipelines<br>
+        • Event Sourcing<br>
+        • CQRS<br>
+        • Stream Processing
+    </td>
+    <td>
+        Apache Kafka<br>
+        Confluent<br>
+        Apache Pulsar
+    </td>
+    <td>
+        Real-Time Order Processing System
+    </td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td><strong>Cloud-Native Data Engineering</strong></td>
+    <td>
+        Organizations require scalable cloud-based analytics.
+    </td>
+    <td>
+        • Data Lakes<br>
+        • Lakehouse Architecture<br>
+        • Real-Time ETL<br>
+        • Streaming Analytics
+    </td>
+    <td>
+        Apache Spark<br>
+        Delta Lake<br>
+        Airflow
+    </td>
+    <td>
+        Cloud Analytics Platform
+    </td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td><strong>Edge Computing & IoT Cloud</strong></td>
+    <td>
+        Smart Cities, Industry 4.0, and IoT applications require edge computing.
+    </td>
+    <td>
+        • Edge Kubernetes<br>
+        • IoT Gateways<br>
+        • Edge AI<br>
+        • Fog Computing
+    </td>
+    <td>
+        K3s<br>
+        Azure IoT Hub<br>
+        AWS Greengrass
+    </td>
+    <td>
+        Smart Agriculture Monitoring System
+    </td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td><strong>Cloud-Native AI Ops</strong></td>
+    <td>
+        AI-driven operations improve reliability and automation.
+    </td>
+    <td>
+        • Predictive Scaling<br>
+        • Self-Healing Systems<br>
+        • Intelligent Monitoring<br>
+        • Anomaly Detection
+    </td>
+    <td>
+        Kubecost<br>
+        Dynatrace<br>
+        Datadog AI
+    </td>
+    <td>
+        AI-Based Auto Scaling Engine
+    </td>
+</tr>
+
+<tr>
+    <td>12</td>
+    <td><strong>Modern Architectural Patterns</strong></td>
+    <td>
+        Industry uses advanced patterns beyond traditional microservices.
+    </td>
+    <td>
+        • Sidecar Pattern<br>
+        • Ambassador Pattern<br>
+        • Circuit Breaker<br>
+        • Saga Pattern<br>
+        • CQRS Pattern<br>
+        • Event Sourcing<br>
+        • Strangler Pattern
+    </td>
+    <td>
+        Istio<br>
+        Envoy<br>
+        Netflix OSS
+    </td>
+    <td>
+        Industry Use:<br>
+        Netflix, Uber, Amazon
+    </td>
+</tr>
+
+<tr>
+    <td>13</td>
+    <td><strong>Multi-Cloud & Hybrid Cloud</strong></td>
+    <td>
+        Organizations avoid vendor lock-in through multi-cloud strategies.
+    </td>
+    <td>
+        • AWS<br>
+        • Azure<br>
+        • Google Cloud<br>
+        • Hybrid Cloud
+    </td>
+    <td>
+        AWS<br>
+        Azure<br>
+        GCP
+    </td>
+    <td>
+        Deploy Application Across Multiple Clouds
+    </td>
+</tr>
+
+<tr>
+    <td>14</td>
+    <td><strong>Cloud Native Application Modernization</strong></td>
+    <td>
+        Enterprises are modernizing legacy applications.
+    </td>
+    <td>
+        • Legacy Modernization<br>
+        • Application Refactoring<br>
+        • Cloud Migration<br>
+        • Replatforming
+    </td>
+    <td>
+        AWS Migration Hub<br>
+        Azure Migrate<br>
+        Google Migrate
+    </td>
+    <td>
+        Case Studies:<br>
+        Netflix, Uber, Spotify, Airbnb
+    </td>
+</tr>
+
+<tr>
+    <td>15</td>
+    <td><strong>Industry Certification Preparation</strong></td>
+    <td>
+        Certifications improve employability and industry readiness.
+    </td>
+    <td>
+        AWS:<br>
+        • AWS Cloud Practitioner<br>
+        • AWS Solutions Architect<br><br>
+
+        Microsoft:<br>
+        • Azure Fundamentals (AZ-900)<br>
+        • Azure Administrator<br><br>
+
+        Kubernetes:<br>
+        • KCNA<br>
+        • CKA<br>
+        • CKAD<br><br>
+
+        CNCF:<br>
+        • Cloud Native Associate
+    </td>
+    <td>
+        AWS<br>
+        Azure<br>
+        CNCF<br>
+        Kubernetes
+    </td>
+    <td>
+        Certification Preparation & Mock Exams
+    </td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+<!-- LEARNING MATERIALS -->
+
+<div class="section searchable" id="materials">
+
+<h3>Learning Materials</h3>
+
+<div class="row">
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 1</h5>
+<p>Programming Fundamentals</p>
+<a href="#" class="btn btn-primary">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 2</h5>
+<p>Advanced Data Structures</p>
+<a href="#" class="btn btn-success">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 3</h5>
+<p>Algorithms</p>
+<a href="#" class="btn btn-warning">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 4</h5>
+<p>Database & API Integration</p>
+<a href="#" class="btn btn-info">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 5</h5>
+<p>Software Development Practices</p>
+<a href="#" class="btn btn-danger">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- QUESTION BANK -->
+
+<div class="section searchable" id="questionbank">
+
+<h3>Question Bank</h3>
+
+<div class="table-responsive">
+
+<!-- UNIT 1 -->
+
+<h3 class="text-primary">UNIT 1 - Modern Application Platforms</h3>
+
+<table class="table table-bordered table-striped">
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain the characteristics of modern application platforms and distributed systems.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss the role of User Stories and Acceptance Test Cases in Agile development.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>3</td><td>Differentiate between Synchronous Controllers and Asynchronous WebFlux Controllers.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain REST architecture and its importance in cloud-native applications.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>5</td><td>Describe Polyglot Persistence and its advantages.</td><td>K2</td><td>CO3</td><td>5</td></tr>
+
+<tr><td>6</td><td>Compare NoSQL and NewSQL databases.</td><td>K4</td><td>CO3</td><td>5</td></tr>
+
+<tr><td>7</td><td>Explain Product Backlog and its significance in Agile development.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>8</td><td>Describe Repository Mapping in Spring Boot applications.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>9</td><td>Discuss the role of API Endpoints in Service-Oriented Architecture.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain the concept of Cloud Computing and Service Fundamentals.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the architecture of Modern Application Platforms and justify the importance of Distributed Systems.</td>
+<td>K4</td>
+<td>CO1</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Design a cloud-native application using Spring Boot, REST APIs, and WebFlux architecture.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Evaluate Polyglot Persistence architecture using NoSQL and RDBMS for enterprise applications.</td>
+<td>K5</td>
+<td>CO3</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Design service components, repositories, and API endpoints for a modern application platform.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Analyze the role of Agile methodologies in developing cloud-native applications.</td>
+<td>K4</td>
+<td>CO1</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- UNIT 2 -->
+
+<h3 class="text-primary">UNIT 2 - Full Stack Components</h3>
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain Distributed Service Communication in cloud-native environments.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss the principles of Test Driven Development (TDD).</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>3</td><td>Explain the purpose of a Technical Backlog.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>4</td><td>Describe Reactive Client-Side Technologies.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>5</td><td>Explain Build Tools and Test Automation.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>6</td><td>Discuss End-to-End Application Layering.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>7</td><td>Explain Cloud Managed Services.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>8</td><td>Describe Cloud Native Reference Architecture.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>9</td><td>Explain Architectural Prototyping in cloud-native systems.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>10</td><td>Discuss Kubernetes architecture and components.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the TDD lifecycle and demonstrate its benefits in software development.</td>
+<td>K4</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate the architecture and components of a Cloud Native Reference Architecture.</td>
+<td>K5</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Design an End-to-End Application Layering model for an enterprise application.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Analyze the role of Kubernetes in cloud-native application deployment.</td>
+<td>K4</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design a Full Stack Cloud-Native Application architecture with appropriate layers.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ==========================
+UNIT 3 - MICROSERVICES ARCHITECTURE
+========================== -->
+
+<h3 class="text-primary">UNIT 3 – Microservices Architecture</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th width="5%">Q.No</th>
+<th width="65%">Question</th>
+<th width="10%">BTL</th>
+<th width="10%">CO</th>
+<th width="10%">Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Define Domain Driven Design (DDD) and explain its significance in Microservices Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>2</td><td>Explain the concept of Bounded Context with suitable examples.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>3</td><td>Discuss the characteristics and advantages of Microservices Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain various Inter-Microservice Communication mechanisms.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>5</td><td>Describe advanced Kubernetes features used in Microservices deployment.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Service Discovery and its importance in Microservices.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>7</td><td>Discuss API Gateway Architecture and its functionalities.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>8</td><td>Explain Function-as-a-Service (FaaS) and its benefits.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>9</td><td>Describe Serverless Architecture and its applications.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain the migration process from Monolithic to Microservices Architecture.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the principles of Domain Driven Design and Bounded Context and justify their role in Microservices implementation.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate the architecture of Microservices and compare it with Monolithic Architecture for enterprise-scale applications.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Analyze the role of Kubernetes in deploying, scaling, and managing Microservices applications.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Design a Serverless Architecture using Function-as-a-Service (FaaS) concepts for an online business application.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Evaluate various Inter-Microservice Communication patterns and recommend the most suitable pattern for a distributed cloud-native application.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================
+UNIT 4 - FUNCTIONS AND CONTAINERS
+========================== -->
+
+<h3 class="text-primary">UNIT 4 – Functions and Containers</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Compare Functions and Containers in cloud-native environments.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>2</td><td>Explain Inter-Functional Communication.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>3</td><td>Discuss Event Driven Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain Work Queue Systems.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>5</td><td>Differentiate Event Brokers and Message Brokers.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Producer and Consumer concepts.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>7</td><td>Describe Event-Driven Processing.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>8</td><td>Discuss Application Scaling techniques.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>9</td><td>Explain Data Scaling strategies.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>10</td><td>Describe Caching and Replication in distributed systems.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Evaluate Kubernetes and Kubeless architectures and recommend suitable deployment scenarios.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Analyze Event Driven Architecture and design an implementation using Producers, Consumers, and Event Brokers.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Design a scalable cloud-native application architecture incorporating container orchestration and auto-scaling mechanisms.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Analyze various Data Scaling techniques including caching, sharding, and replication for enterprise applications.</td>
+<td>K4</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design an Event-Driven Processing system for a real-time financial transaction platform.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================
+UNIT 5 - CONTAINER HOSTING &
+RELIABILITY ENGINEERING
+========================== -->
+
+<h3 class="text-primary">UNIT 5 – Container Hosting and Reliability Engineering</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain Metrics and Monitoring in cloud-native applications.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss Quality Metrics for Non-Functional Requirements.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>3</td><td>Explain Distributed Tracing and its benefits.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>4</td><td>Describe Performance Engineering concepts.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>5</td><td>Discuss Security Architecture for Modern Platforms.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Identity and Access Management (IAM).</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>7</td><td>Describe Data Asset Classification and Protection.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>8</td><td>Explain Container Security mechanisms.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>9</td><td>Discuss Service Level Indicators (SLI).</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain Platform Reliability Engineering.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze Performance Engineering and Distributed Tracing techniques used in cloud-native systems.</td>
+<td>K4</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate Security Architecture models for modern cloud-native platforms with suitable examples.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Analyze various Container Security mechanisms and recommend best practices for enterprise deployment.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Evaluate Platform Reliability Engineering practices and justify the importance of Service Level Indicators (SLI) and Service Level Objectives (SLO).</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design a secure, fault-tolerant, and highly reliable cloud-native application architecture incorporating IAM, Monitoring, Observability, and Reliability Engineering.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<h3 class="text-danger">Higher Order Thinking Questions (NBA / OBE)</h3>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-danger">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Design a cloud-native healthcare management system using Microservices, Kubernetes, and Event-Driven Architecture.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Propose a scalable architecture for an e-commerce platform supporting millions of users.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Analyze the impact of Polyglot Persistence on enterprise application performance.</td>
+<td>K4</td>
+<td>CO3</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Design a secure cloud-native banking application using IAM and Zero Trust principles.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Develop a migration strategy for converting a monolithic application into Microservices architecture.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Evaluate different scalability techniques for handling large-scale cloud workloads.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Design a serverless workflow for IoT data processing and monitoring.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Analyze the role of Kubernetes in implementing cloud-native best practices.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Propose a performance monitoring framework using Distributed Tracing and Observability tools.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Design a highly available and fault-tolerant cloud-native platform for Smart City applications.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+<div id="mcq" class="cardx">
+<!-- mcq  -->
+<!-- ==========================================
+UNIT 1 - MODERN APPLICATION PLATFORMS
+========================================== -->
+
+<h3 class="text-primary">UNIT 1 – Modern Application Platforms (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th width="5%">Q.No</th>
+<th width="45%">Question</th>
+<th width="35%">Options</th>
+<th width="15%">Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Which architecture style exposes resources through HTTP methods?</td>
+<td>
+A) SOAP<br>
+B) REST<br>
+C) RPC<br>
+D) CORBA
+</td>
+<td><b>B) REST</b></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>What is the primary goal of Distributed Systems?</td>
+<td>
+A) Single machine processing<br>
+B) Data redundancy only<br>
+C) Resource sharing across multiple systems<br>
+D) Standalone execution
+</td>
+<td><b>C) Resource sharing across multiple systems</b></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Which Spring technology supports reactive programming?</td>
+<td>
+A) Spring MVC<br>
+B) Spring JDBC<br>
+C) Spring WebFlux<br>
+D) Spring Batch
+</td>
+<td><b>C) Spring WebFlux</b></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Polyglot Persistence means:</td>
+<td>
+A) Using one database<br>
+B) Using multiple databases based on requirements<br>
+C) Using only NoSQL<br>
+D) Using only SQL
+</td>
+<td><b>B) Using multiple databases based on requirements</b></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Which database is document-oriented?</td>
+<td>
+A) MySQL<br>
+B) Oracle<br>
+C) MongoDB<br>
+D) PostgreSQL
+</td>
+<td><b>C) MongoDB</b></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>User Stories are mainly used in:</td>
+<td>
+A) Waterfall Model<br>
+B) Agile Development<br>
+C) Spiral Model<br>
+D) RAD Model
+</td>
+<td><b>B) Agile Development</b></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Which annotation is commonly used for REST APIs in Spring Boot?</td>
+<td>
+A) @Service<br>
+B) @Repository<br>
+C) @RestController<br>
+D) @Bean
+</td>
+<td><b>C) @RestController</b></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Cloud Computing primarily provides:</td>
+<td>
+A) Local Storage<br>
+B) Shared Computing Resources<br>
+C) Desktop Applications<br>
+D) Offline Processing
+</td>
+<td><b>B) Shared Computing Resources</b></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Which backlog contains prioritized product features?</td>
+<td>
+A) Sprint Backlog<br>
+B) Product Backlog<br>
+C) Bug Backlog<br>
+D) Technical Backlog
+</td>
+<td><b>B) Product Backlog</b></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Asynchronous communication improves:</td>
+<td>
+A) Blocking Time<br>
+B) Scalability<br>
+C) Memory Usage Only<br>
+D) Hardware Cost
+</td>
+<td><b>B) Scalability</b></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 2 - FULL STACK COMPONENTS
+========================================== -->
+
+<h3 class="text-primary">UNIT 2 – Full Stack Components (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>TDD stands for:</td>
+<td>
+A) Technical Design Development<br>
+B) Test Driven Development<br>
+C) Testing Deployment Design<br>
+D) Tool Driven Deployment
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Which phase comes first in TDD?</td>
+<td>
+A) Refactor<br>
+B) Green<br>
+C) Red<br>
+D) Deploy
+</td>
+<td><b>C</b></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>React is mainly used for:</td>
+<td>
+A) Database Layer<br>
+B) Presentation Layer<br>
+C) Server Layer<br>
+D) Middleware
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Kubernetes is primarily used for:</td>
+<td>
+A) Data Mining<br>
+B) Container Orchestration<br>
+C) AI Training<br>
+D) Database Design
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Which architecture provides guidelines for cloud-native design?</td>
+<td>
+A) MVC<br>
+B) Cloud Native Reference Architecture<br>
+C) Waterfall<br>
+D) Client Server
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Which layer contains business logic?</td>
+<td>
+A) Data Layer<br>
+B) Presentation Layer<br>
+C) Application Layer<br>
+D) UI Layer
+</td>
+<td><b>C</b></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Git is mainly used for:</td>
+<td>
+A) Version Control<br>
+B) Networking<br>
+C) Monitoring<br>
+D) Security
+</td>
+<td><b>A</b></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Cloud Managed Services reduce:</td>
+<td>
+A) Automation<br>
+B) Operational Overhead<br>
+C) Security<br>
+D) Scalability
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Which build automation tool is commonly used in Java?</td>
+<td>
+A) Maven<br>
+B) Excel<br>
+C) Photoshop<br>
+D) Wireshark
+</td>
+<td><b>A</b></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Technical Backlog mainly contains:</td>
+<td>
+A) User Stories Only<br>
+B) Infrastructure Tasks<br>
+C) Attendance Data<br>
+D) Payroll Information
+</td>
+<td><b>B</b></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 3 - MICROSERVICES ARCHITECTURE
+========================================== -->
+
+<h3 class="text-primary">UNIT 3 – Microservices Architecture (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>DDD stands for:</td><td>A) Data Driven Design<br>B) Domain Driven Design<br>C) Dynamic Design Development<br>D) Distributed Data Design</td><td><b>B</b></td></tr>
+
+<tr><td>2</td><td>Bounded Context is a concept in:</td><td>A) Scrum<br>B) Kubernetes<br>C) DDD<br>D) DevOps</td><td><b>C</b></td></tr>
+
+<tr><td>3</td><td>Which component acts as the entry point in Microservices?</td><td>A) Database<br>B) API Gateway<br>C) Load Balancer<br>D) Cache</td><td><b>B</b></td></tr>
+
+<tr><td>4</td><td>Service Discovery helps:</td><td>A) Find available services dynamically<br>B) Create databases<br>C) Manage UI<br>D) Generate reports</td><td><b>A</b></td></tr>
+
+<tr><td>5</td><td>Kubernetes Namespace provides:</td><td>A) Storage<br>B) Isolation<br>C) Security Patch<br>D) Backup</td><td><b>B</b></td></tr>
+
+<tr><td>6</td><td>FaaS stands for:</td><td>A) Function as a Service<br>B) File as a Service<br>C) Feature as a Service<br>D) Framework as a Service</td><td><b>A</b></td></tr>
+
+<tr><td>7</td><td>Serverless Computing charges based on:</td><td>A) Server Purchase<br>B) Usage<br>C) Hardware Size<br>D) CPU Type</td><td><b>B</b></td></tr>
+
+<tr><td>8</td><td>Which protocol is widely used for Microservice communication?</td><td>A) HTTP/REST<br>B) FTP<br>C) SMTP<br>D) POP3</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Microservices are:</td><td>A) Tightly Coupled<br>B) Independently Deployable<br>C) Monolithic<br>D) Static
+</td><td><b>B</b></td></tr>
+
+<tr><td>10</td><td>Eureka is commonly used for:</td><td>A) Logging<br>B) Monitoring<br>C) Service Discovery<br>D) Security</td><td><b>C</b></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 4 - FUNCTIONS AND CONTAINERS
+========================================== -->
+
+<h3 class="text-primary">UNIT 4 – Functions and Containers (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Which is event-driven and short-lived?</td><td>A) Container<br>B) Function (FaaS)<br>C) VM<br>D) Database</td><td><b>B</b></td></tr>
+
+<tr><td>2</td><td>EDA stands for:</td><td>A) Event Driven Architecture<br>B) Enterprise Data Architecture<br>C) External Data Access<br>D) Event Data Application</td><td><b>A</b></td></tr>
+
+<tr><td>3</td><td>Kafka is an example of:</td><td>A) Event Broker<br>B) Browser<br>C) Compiler<br>D) Database</td><td><b>A</b></td></tr>
+
+<tr><td>4</td><td>Producer sends:</td><td>A) Messages<br>B) Reports<br>C) Programs<br>D) Databases</td><td><b>A</b></td></tr>
+
+<tr><td>5</td><td>Consumer receives:</td><td>A) Threads<br>B) Messages<br>C) Drivers<br>D) Queries</td><td><b>B</b></td></tr>
+
+<tr><td>6</td><td>Horizontal Scaling means:</td><td>A) Add More Servers<br>B) Add More RAM<br>C) Add Storage Only<br>D) Remove Nodes</td><td><b>A</b></td></tr>
+
+<tr><td>7</td><td>Replication improves:</td><td>A) Availability<br>B) Compilation<br>C) Coding<br>D) Testing</td><td><b>A</b></td></tr>
+
+<tr><td>8</td><td>Redis is commonly used for:</td><td>A) Caching<br>B) UI Design<br>C) DNS<br>D) Backup</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Message Queue enables:</td><td>A) Synchronous Processing<br>B) Asynchronous Processing<br>C) Manual Processing<br>D) Sequential Storage</td><td><b>B</b></td></tr>
+
+<tr><td>10</td><td>Kubeless is used for:</td><td>A) Serverless Functions<br>B) Database Hosting<br>C) Logging<br>D) Monitoring</td><td><b>A</b></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 5 - CONTAINER HOSTING & RELIABILITY
+========================================== -->
+
+<h3 class="text-primary">UNIT 5 – Container Hosting & Reliability Engineering (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Prometheus is mainly used for:</td><td>A) Monitoring<br>B) Security<br>C) Development<br>D) Networking</td><td><b>A</b></td></tr>
+
+<tr><td>2</td><td>Distributed Tracing helps identify:</td><td>A) UI Issues<br>B) Bottlenecks<br>C) CSS Errors<br>D) Hardware Damage</td><td><b>B</b></td></tr>
+
+<tr><td>3</td><td>IAM stands for:</td><td>A) Identity and Access Management<br>B) Internal Access Module<br>C) Internet Access Method<br>D) Identity Allocation Management</td><td><b>A</b></td></tr>
+
+<tr><td>4</td><td>RBAC stands for:</td><td>A) Rule Based Access Control<br>B) Role Based Access Control<br>C) Resource Based Access Control<br>D) Runtime Based Access Control</td><td><b>B</b></td></tr>
+
+<tr><td>5</td><td>SLI stands for:</td><td>A) Service Level Indicator<br>B) Security Level Indicator<br>C) Software Layer Interface<br>D) Service Logic Interface</td><td><b>A</b></td></tr>
+
+<tr><td>6</td><td>SRE stands for:</td><td>A) Software Reliability Engineering<br>B) Site Reliability Engineering<br>C) Security Reliability Engineering<br>D) System Resource Engineering</td><td><b>B</b></td></tr>
+
+<tr><td>7</td><td>OAuth is used for:</td><td>A) Authorization<br>B) Caching<br>C) Monitoring<br>D) Scaling</td><td><b>A</b></td></tr>
+
+<tr><td>8</td><td>Container Security protects:</td><td>A) Containers and Workloads<br>B) UI Pages<br>C) Office Systems<br>D) Printers</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Observability includes:</td><td>A) Metrics<br>B) Logs<br>C) Traces<br>D) All of the Above</td><td><b>D</b></td></tr>
+
+<tr><td>10</td><td>Fault tolerance improves:</td><td>A) Reliability<br>B) Coding Speed<br>C) Storage Size<br>D) UI Design</td><td><b>A</b></td></tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<!-- mcq end -->
+
+</div>
+<div id="dd" class="cardx">
+<div class="footer">
+© 2026 CNA Student Learning Portal Design and Develop by A.N. Gnana Jeevan
+</div>
+</div>
+</div>
+
+<script>
+
+document.getElementById('searchBox')
+.addEventListener('keyup', function(){
+
+let filter=this.value.toLowerCase();
+
+document.querySelectorAll('.searchable')
+.forEach(function(section){
+
+let text=section.innerText.toLowerCase();
+
+if(text.indexOf(filter)>-1)
+section.style.display="block";
+else
+section.style.display="none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
