@@ -1,650 +1,2606 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>AI Career Intelligence Portal — B.Tech IT Complete Roadmap</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CNA Learning Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 <style>
-:root{
---bg:#f0f4f8;--pnl:#fff;--txt:#0f172a;--mut:#64748b;
---pri:#2563eb;--prd:#1e40af;--acc:#06b6d4;
---grn:#16a34a;--org:#ea580c;--red:#dc2626;--pur:#7c3aed;
---yel:#eab308;--pnk:#ec4899;--teal:#14b8a6;
---brd:#e2e8f0;--shd:0 8px 30px rgba(15,23,42,.07);
---r:16px;--sbw:280px;
+
+body{
+    overflow-x:hidden;
+    background:#f4f6f9;
 }
-.dark{--bg:#0f172a;--pnl:#1e293b;--txt:#e2e8f0;--mut:#94a3b8;--brd:#334155;--shd:0 8px 30px rgba(0,0,0,.3)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;transition:background .3s,color .3s}
-.L{display:grid;grid-template-columns:var(--sbw) 1fr;min-height:100vh}
 
-/* Sidebar */
-.sb{position:sticky;top:0;height:100vh;background:linear-gradient(175deg,#0f172a,#1e293b);color:#e2e8f0;display:flex;flex-direction:column;overflow-y:auto;z-index:10;transition:left .3s}
-.sb::-webkit-scrollbar{width:4px}.sb::-webkit-scrollbar-thumb{background:#334155;border-radius:9px}
-.sb-h{padding:20px 16px 14px;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:10px}
-.sb-ic{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--pri),var(--acc));display:grid;place-items:center;font-weight:900;font-size:13px;color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.35)}
-.sb-h h1{font-size:13px;line-height:1.2}.sb-h small{color:#94a3b8;font-size:10px}
-.sb-n{flex:1;padding:6px 0}
-.sb-l{color:#475569;text-transform:uppercase;letter-spacing:.1em;font-size:9.5px;font-weight:800;padding:12px 16px 3px}
-.sb-n a{display:flex;align-items:center;gap:9px;padding:8px 16px;color:#cbd5e1;text-decoration:none;font-size:12.5px;border-left:3px solid transparent;transition:.2s}
-.sb-n a:hover,.sb-n a.on{background:#1e293b;color:#fff;border-left-color:var(--acc)}
-.sb-f{padding:10px 16px;border-top:1px solid #1e293b;font-size:9px;color:#475569;text-align:center}
-
-.mn{padding:22px 24px;max-width:1520px;overflow-x:hidden}
-.top{display:flex;justify-content:flex-end;gap:8px;margin-bottom:12px}
-
-/* Hero */
-.hero{background:linear-gradient(135deg,#1e3a8a,#7c3aed 50%,#06b6d4);border-radius:22px;padding:38px 34px;color:#fff;position:relative;overflow:hidden;margin-bottom:22px}
-.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:280px;height:280px;background:rgba(255,255,255,.06);border-radius:50%}
-.hero>*{position:relative;z-index:1}
-.hero-g{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center}
-.bdg{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;margin-bottom:10px}
-.hero h2{font-size:32px;line-height:1.12;font-weight:900;margin-bottom:8px}
-.hero p{opacity:.88;max-width:540px;font-size:14px;margin-bottom:14px}
-.ha{display:flex;flex-wrap:wrap;gap:8px}
-.stg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.stc{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px;text-align:center}
-.stc strong{display:block;font-size:26px;font-weight:900}.stc span{font-size:10px;opacity:.8}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:11px;font-weight:800;font-size:12.5px;text-decoration:none;border:none;cursor:pointer;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.bw{background:#fff;color:#1e3a8a}.bgl{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25)}
-.bp{background:var(--pri);color:#fff}.bp:hover{background:var(--prd)}
-.bs{background:var(--bg);color:var(--txt);border:1px solid var(--brd)}.bs:hover{background:var(--brd)}
-.bsm{padding:6px 10px;font-size:11px}
-
-/* AI Box */
-.ai{background:var(--pnl);border:2px solid var(--acc);border-radius:20px;padding:24px;margin-bottom:22px;box-shadow:0 12px 40px rgba(6,182,212,.08);transition:background .3s}
-.ai-t{display:flex;align-items:center;gap:9px;margin-bottom:3px}.ai-t h2{font-size:19px}
-.pls{width:12px;height:12px;background:var(--acc);border-radius:50%;animation:pl 1.6s infinite}
-@keyframes pl{0%,100%{box-shadow:0 0 0 0 rgba(6,182,212,.5)}50%{box-shadow:0 0 0 10px rgba(6,182,212,0)}}
-.ai-s{color:var(--mut);font-size:12.5px;margin-bottom:12px}
-.ai-r{display:flex;gap:8px;margin-bottom:10px}
-.ai-i{flex:1;padding:11px 12px;border:2px solid var(--brd);border-radius:12px;font-size:14px;outline:none;background:var(--bg);color:var(--txt);transition:.2s}.ai-i:focus{border-color:var(--acc)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.ch{padding:6px 12px;border-radius:999px;background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;font-size:11.5px;font-weight:700;cursor:pointer;transition:.15s}
-.ch:hover{background:#ccfbf1;transform:scale(1.03)}
-.dark .ch{background:#134e4a;border-color:#115e59;color:#5eead4}
-.ai-o{display:none;background:linear-gradient(135deg,#f0fdfa,#eff6ff);border:1px solid #a5f3fc;border-radius:16px;padding:20px;animation:fu .4s ease}
-.dark .ai-o{background:linear-gradient(135deg,#1a2e35,#1e293b);border-color:#155e75}
-@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-
-/* Section */
-.sec{background:var(--pnl);border:1px solid var(--brd);border-radius:var(--r);padding:22px;margin-bottom:20px;box-shadow:var(--shd);transition:background .3s}
-.sh{margin-bottom:16px}.sh h2{font-size:20px;margin-bottom:2px}.sh p{color:var(--mut);font-size:13px}
-
-/* Gap Chart */
-.gc{display:grid;gap:10px;margin:14px 0}
-.gr{display:grid;grid-template-columns:150px 1fr 55px;align-items:center;gap:8px}
-.gr .lb{font-size:11.5px;font-weight:700;text-align:right}
-.gr .bbg{height:24px;background:var(--brd);border-radius:12px;overflow:hidden}
-.gr .bar{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:800;color:#fff;width:0;transition:width 1.2s ease}
-.gr .pct{font-size:11.5px;font-weight:900}
-
-/* Curriculum Table */
-.ctbl{width:100%;border-collapse:collapse;font-size:12px}
-.ctbl th,.ctbl td{padding:8px 10px;border:1px solid var(--brd);vertical-align:top}
-.ctbl th{background:var(--brd);font-weight:800;text-align:left;white-space:nowrap;position:sticky;top:0;z-index:1}
-.ctbl td{background:var(--pnl)}
-.ctbl tr.hl{background:#eff6ff}.dark .ctbl tr.hl{background:#1e3a5f}
-.ctbl-wrap{max-height:500px;overflow:auto;border-radius:12px;border:1px solid var(--brd)}
-
-/* Visual Roadmap */
-.vr{position:relative}.vr-ln{position:absolute;left:28px;top:0;bottom:0;width:4px;border-radius:4px;background:linear-gradient(var(--pri),var(--acc),var(--grn),var(--org),var(--pur),var(--pnk))}
-.vs{position:relative;padding-left:68px;margin-bottom:26px}
-.vd{position:absolute;left:18px;top:8px;width:24px;height:24px;border-radius:50%;border:4px solid var(--pnl);z-index:2}
-.vc{background:var(--pnl);border:1px solid var(--brd);border-radius:16px;padding:16px;box-shadow:var(--shd);transition:.22s,background .3s}
-.vc:hover{transform:translateX(5px);box-shadow:0 14px 35px rgba(15,23,42,.1)}
-.vc h3{font-size:15px;margin-bottom:4px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
-.sb2{padding:2px 9px;border-radius:999px;font-size:10px;font-weight:900;color:#fff}
-.vc p,.vc li{color:var(--mut);font-size:12.5px}.vc ul{padding-left:14px;margin:4px 0}
-.tgs{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:10px}
-
-/* Pills */
-.p{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10.5px;font-weight:800}
-.pb{background:#dbeafe;color:#1e40af}.pg{background:#dcfce7;color:#166534}.po{background:#ffedd5;color:#9a3412}.pp{background:#ede9fe;color:#5b21b6}.pr{background:#fee2e2;color:#991b1b}.pc{background:#cffafe;color:#155e75}.pgr{background:#f1f5f9;color:#334155}.ppk{background:#fce7f3;color:#9d174d}.py{background:#fef9c3;color:#854d0e}
-
-/* Grid / Card */
-.g{display:grid;gap:12px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.cd{background:var(--pnl);border:1px solid var(--brd);border-radius:16px;padding:16px;transition:.22s,background .3s}
-.cd:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,23,42,.08)}
-.cd h3{font-size:15px;margin-bottom:5px}.cd p,.cd li{color:var(--mut);font-size:12.5px}.cd ul{padding-left:14px}
-.cd a{color:var(--pri);text-decoration:underline;font-weight:700}
-
-/* Filters */
-.flt{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.fb{padding:8px 12px;border-radius:999px;border:2px solid var(--brd);background:var(--pnl);font-weight:800;font-size:11.5px;cursor:pointer;transition:.2s;color:var(--txt)}
-.fb:hover{border-color:var(--pri);color:var(--pri)}
-.fb.on{background:var(--pri);color:#fff;border-color:var(--pri)}
-.srch{width:100%;padding:11px 12px;border:2px solid var(--brd);border-radius:12px;font-size:13px;outline:none;margin-bottom:12px;background:var(--bg);color:var(--txt);transition:.2s}
-.srch:focus{border-color:var(--pri)}
-
-/* Tables */
-.tw{overflow-x:auto;border-radius:12px;border:1px solid var(--brd)}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th,td{padding:9px 11px;border:1px solid var(--brd);vertical-align:top}
-th{background:var(--brd);font-weight:800;text-align:left;white-space:nowrap}
-td{color:var(--mut);background:var(--pnl)}
-
-/* Accordion */
-details{border:1px solid var(--brd);border-radius:var(--r);background:var(--pnl);margin-bottom:8px;overflow:hidden;transition:background .3s}
-summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:800;display:flex;justify-content:space-between;align-items:center;font-size:13.5px}
-summary::-webkit-details-marker{display:none}
-summary .ar{transition:.2s;font-size:14px}
-details[open] summary{border-bottom:1px solid var(--brd);background:var(--brd)}
-details[open] summary .ar{transform:rotate(90deg)}
-.db{padding:16px}
-
-.nt{border-left:5px solid var(--pri);background:#eff6ff;padding:12px 14px;border-radius:10px;color:#1e3a8a;margin:10px 0;font-size:12.5px}
-.nt.wr{border-color:var(--org);background:#fff7ed;color:#9a3412}
-.dark .nt{background:#1e293b;color:var(--txt)}
-
-/* ===== IMAGE POPUP MODAL ===== */
-.img-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;justify-content:center;align-items:center;padding:20px;cursor:zoom-out}
-.img-modal-bg.show{display:flex}
-.img-modal-bg img{max-width:95vw;max-height:92vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:imgPop .3s ease}
-@keyframes imgPop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
-.img-close{position:fixed;top:18px;right:24px;background:rgba(255,255,255,.2);backdrop-filter:blur(8px);border:none;color:#fff;font-size:28px;width:48px;height:48px;border-radius:50%;cursor:pointer;z-index:101;display:flex;align-items:center;justify-content:center;transition:.2s}
-.img-close:hover{background:rgba(255,255,255,.4);transform:scale(1.1)}
-
-/* Roadmap Button Cards */
-.rm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:16px}
-.rm-card{background:var(--pnl);border:2px solid var(--brd);border-radius:18px;padding:18px;cursor:pointer;transition:.25s;text-align:center;position:relative;overflow:hidden}
-.rm-card:hover{border-color:var(--pri);transform:translateY(-4px);box-shadow:0 16px 40px rgba(37,99,235,.12)}
-.rm-card::after{content:'Click to view roadmap →';position:absolute;bottom:0;left:0;right:0;background:var(--pri);color:#fff;font-size:11px;font-weight:800;padding:6px;opacity:0;transition:.25s;transform:translateY(100%)}
-.rm-card:hover::after{opacity:1;transform:translateY(0)}
-.rm-card .rm-icon{font-size:36px;margin-bottom:8px;display:block}
-.rm-card h3{font-size:14px;margin-bottom:4px}
-.rm-card p{color:var(--mut);font-size:11px}
-.rm-card .rm-preview{width:100%;height:100px;object-fit:cover;border-radius:10px;margin-top:8px;border:1px solid var(--brd)}
-
-/* Role Detail Modal */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:50;justify-content:center;align-items:flex-start;padding:40px 20px;overflow-y:auto}
-.modal-bg.show{display:flex}
-.modal{background:var(--pnl);border-radius:22px;max-width:960px;width:100%;padding:30px;position:relative;animation:fu .3s ease;max-height:90vh;overflow-y:auto}
-.modal-cls{position:absolute;top:14px;right:18px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--txt)}
-.modal h2{font-size:24px;margin-bottom:14px}
-.modal h3{margin:16px 0 6px;font-size:17px}
-.modal ul{padding-left:18px;margin-bottom:10px}
-.modal li{margin-bottom:4px;font-size:13.5px;color:var(--mut)}
-
-.glow-link{position:relative;color:var(--pri);text-decoration:none;font-weight:800;padding:2px 4px;transition:.2s}
-.glow-link:hover{color:#fff;background:var(--pri);border-radius:6px}
-.glow-link::after{content:'→';margin-left:4px;transition:.2s}.glow-link:hover::after{margin-left:8px}
-
-.ft{text-align:center;color:var(--mut);padding:24px 0;font-size:10px}
-.mob{display:none;position:fixed;right:12px;bottom:12px;z-index:30;width:50px;height:50px;border-radius:50%;background:var(--pri);color:#fff;border:none;font-size:18px;box-shadow:0 10px 30px rgba(37,99,235,.35);cursor:pointer}
-.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9}.ov.sh{display:block}
-@media(max-width:1080px){
-.L{grid-template-columns:1fr}
-.sb{position:fixed;left:-300px;width:var(--sbw)}.sb.open{left:0}
-.mob{display:block}.mn{padding:14px 10px}
-.hero-g,.g2,.g3,.g4,.sg,.rm-grid{grid-template-columns:1fr}
-.hero h2{font-size:24px}
-.gr{grid-template-columns:80px 1fr 40px}
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:270px;
+    height:100vh;
+    background:#1e293b;
+    overflow-y:auto;
 }
-@media print{
-.sb,.mob,.ov,.ai,.ha,.flt,.srch,.top,.modal-bg,.img-modal-bg{display:none!important}
-.L{display:block}.mn{padding:0}
-.sec,.hero{box-shadow:none;break-inside:avoid}
+
+.sidebar h3{
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-bottom:1px solid #334155;
 }
+
+.sidebar a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 20px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:#0ea5e9;
+}
+
+.content{
+    margin-left:270px;
+    padding:20px;
+}
+
+.topbar{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-dashboard{
+    border:none;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card-dashboard:hover{
+    transform:translateY(-5px);
+}
+
+.section{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.section h3{
+    color:#0f172a;
+    border-left:5px solid #0ea5e9;
+    padding-left:10px;
+}
+
+.unit-card{
+    margin-bottom:20px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.content{
+    margin-left:0;
+}
+.cardx{background:#fff;border-radius:12px;padding:20px;margin-top:20px}
+}
+
 </style>
 </head>
+
 <body>
 
-<button class="mob" onclick="togSB()">☰</button>
-<div class="ov" id="ov" onclick="togSB()"></div>
+<div class="sidebar">
 
-<!-- IMAGE POPUP -->
-<div class="img-modal-bg" id="imgModal" onclick="closeImg()">
-  <button class="img-close" onclick="closeImg()">✕</button>
-  <img id="imgModalImg" src="" alt="Roadmap"/>
-</div>
+<h3>
+<i class="fas fa-laptop-code"></i><br>
+21CSE477T-CLOUD NATIVE ARCHITECTURE FOR MODERN PLATFORMS
+</h3>
 
-<!-- ROLE DETAIL MODAL -->
-<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()">
-  <div class="modal" id="modalContent">
-    <button class="modal-cls" onclick="closeModal()">✕</button>
-    <div id="modalBody"></div>
-  </div>
-</div>
+<a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+<a href="#about"><i class="fas fa-circle-info"></i>About Course</a>
 
-<div class="L">
-<!-- SIDEBAR -->
-<aside class="sb" id="sb">
-<div class="sb-h"><div class="sb-ic">IT</div><div><h1>Career Intelligence</h1><small>B.Tech IT · Complete Roadmap</small></div></div>
-<nav class="sb-n">
-<div class="sb-l">Dashboard</div>
-<a href="#overview" class="on" onclick="nav(this)">🏠 Overview</a>
-<a href="#ai" onclick="nav(this)">🤖 AI Career Advisor</a>
-<a href="#curric" onclick="nav(this)">📋 Curriculum & Roadmaps</a>
-<a href="#gap" onclick="nav(this)">📊 Gap Analysis</a>
-<a href="#vroad" onclick="nav(this)">🗺️ Visual Roadmap</a>
-<div class="sb-l">Role Roadmap Images</div>
-<a href="javascript:void(0)" onclick="nav(this);showImg('net')">🌐 Network Engineer</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('swe')">💻 Software Engineer</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('cloud')">☁️ Cloud Engineer</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('sec')">🔒 Cybersecurity</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('data')">📈 Data / ML</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('dba')">🗄️ DBA</a>
-<a href="javascript:void(0)" onclick="nav(this);showImg('qa')">🧪 QA Engineer</a>
-<div class="sb-l">More</div>
-<a href="#roles" onclick="nav(this)">💼 All Roles</a>
-<a href="#map" onclick="nav(this)">📚 Course Mapping</a>
-<a href="#certs" onclick="nav(this)">🏅 Certifications</a>
-<a href="#proj" onclick="nav(this)">🛠️ Projects</a>
-<a href="#govt" onclick="nav(this)">🏛️ Govt Jobs</a>
-<a href="#place" onclick="nav(this)">🎯 Placement</a>
-</nav>
-<div class="sb-f">© 2025 Career Intelligence Portal</div>
-</aside>
+<a href="#syllabus"><i class="fas fa-book"></i> Syllabus</a>
 
-<!-- MAIN -->
-<main class="mn">
-<div class="top">
-<button class="btn bs bsm" onclick="togDark()">🌓 Dark</button>
-<button class="btn bs bsm" onclick="window.print()">🖨️ PDF</button>
+<a href="#lesson"><i class="fas fa-calendar"></i> Lesson Plan</a>
+
+<a href="#obe"><i class="fas fa-bullseye"></i> Outcome Based Education</a>
+
+<a href="#gap"><i class="fas fa-industry"></i> Industry Gap Analysis</a>
+
+<a href="#beyond"><i class="fas fa-lightbulb"></i> Beyond Syllabus</a>
+
+<a href="#materials"><i class="fas fa-folder-open"></i> Learning Materials</a>
+
+<a href="#questionbank"><i class="fas fa-file-alt"></i> Question Bank</a>
+<a href="#mcq"><i class="fas fa-file-alt"></i> MCQ</a>
+<a href="#dd">
+<i class="fa fa-copyright"></i>Design&Deveplop-ANGJ</a>
+
 </div>
 
-<!-- HERO -->
-<section class="hero" id="overview">
-<div class="hero-g">
-<div>
-<div class="bdg">🎓 B.Tech IT — Complete Curriculum-to-Career Mapping</div>
-<h2>AI Career Intelligence Portal</h2>
-<p>Click any role to see the full visual roadmap infographic. Use the AI advisor to get personalised semester-wise guidance. Explore curriculum gaps, certifications, and placement plans.</p>
-<div class="ha">
-<a class="btn bw" href="#ai">🤖 Ask AI Advisor</a>
-<a class="btn bgl" href="#curric">📋 View Roadmap Images</a>
-<a class="btn bgl" href="#vroad">🗺️ Visual Timeline</a>
+<div class="content">
+
+<div class="topbar">
+
+<div class="row">
+<div class="col-md-8">
+<h2>Student Learning Portal</h2>
+<p>CLOUD NATIVE ARCHITECTURE FOR MODERN PLATFORMS - Resource Center</p>
+</div>
+
+<div class="col-md-4">
+<input type="text" class="form-control"
+placeholder="Search Content..."
+id="searchBox">
+</div>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<div class="row mt-4">
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-primary text-white">
+<div class="card-body text-center">
+<h2>5</h2>
+<p>Units</p>
 </div>
 </div>
-<div class="stg">
-<div class="stc"><strong>8</strong><span>Career Domains</span></div>
-<div class="stc"><strong>30+</strong><span>Subjects Mapped</span></div>
-<div class="stc"><strong>25+</strong><span>Certifications</span></div>
-<div class="stc"><strong>50+</strong><span>Bridge Courses</span></div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-success text-white">
+<div class="card-body text-center">
+<h2>45</h2>
+<p>Periods</p>
 </div>
 </div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-success text-white">
+<div class="card-body text-center">
+<h2>45</h2>
+<p>ILH Periods</p>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-warning text-dark">
+<div class="card-body text-center">
+<h2>5 & 12</h2>
+<p>COs & POs</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card card-dashboard bg-danger text-white">
+<div class="card-body text-center">
+<h2>100+</h2>
+<p>Questions</p>
+</div>
+</div>
+</div>
+
+</div>
+
 </section>
-
-<!-- AI ADVISOR -->
-<section class="ai" id="ai">
-<div class="ai-t"><div class="pls"></div><h2>AI Career Advisor</h2></div>
-<p class="ai-s">Type your career goal or click a chip below.</p>
-<div class="ai-r">
-<input class="ai-i" id="aiIn" placeholder='"I want to become a Cloud Engineer at Amazon"'/>
-<button class="btn bp" onclick="runAI()">Generate →</button>
+<div id="about" class="cardx">
+<h2>About Course</h2>
+<p align="justify">21CSE477T-Cloud Native Architecture for Modern Platforms  is a professional elective course is designed to provide students with a comprehensive understanding of the architectural principles behind modern application platforms and the best high-level structures for various application types, including web, database, and thick-client systems.</p>
 </div>
-<div class="chips">
-<span class="ch" onclick="qk(this)">Cloud Engineer at Amazon</span>
-<span class="ch" onclick="qk(this)">Network Engineer at Cisco</span>
-<span class="ch" onclick="qk(this)">Cybersecurity Analyst</span>
-<span class="ch" onclick="qk(this)">Data Analyst at Mu Sigma</span>
-<span class="ch" onclick="qk(this)">DevOps Engineer</span>
-<span class="ch" onclick="qk(this)">Full Stack Developer at Zoho</span>
-<span class="ch" onclick="qk(this)">ISRO Scientist (GATE)</span>
-<span class="ch" onclick="qk(this)">QA Engineer at Infosys</span>
-</div>
-<div class="ai-o" id="aiO"></div>
-</section>
+<!-- SYLLABUS -->
 
-<!-- CURRICULUM TABLE + ROADMAP IMAGE BUTTONS -->
-<section class="sec" id="curric">
-<div class="sh">
-<h2>📋 Curriculum Table & Visual Roadmap Infographics</h2>
-<p>Click any role button below to view the full detailed roadmap infographic (Syllabus → Skills → Courses → Certifications → Projects → Companies).</p>
-</div>
+<div class="section searchable" id="syllabus">
 
-<!-- ROADMAP IMAGE BUTTONS -->
-<div class="rm-grid">
-  <div class="rm-card" onclick="showImg('net')">
-    <span class="rm-icon">🌐</span>
-    <h3>Network Engineer</h3>
-    <p>CCNA · Routing · Wireshark · Cisco</p>
-    <img class="rm-preview" src="roadmap-network.png" alt="Network Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('swe')">
-    <span class="rm-icon">💻</span>
-    <h3>Software Engineer</h3>
-    <p>DSA · React · Spring · Full Stack</p>
-    <img class="rm-preview" src="roadmap-software.png" alt="Software Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('cloud')">
-    <span class="rm-icon">☁️</span>
-    <h3>Cloud Engineer</h3>
-    <p>AWS · Azure · GCP · Terraform</p>
-    <img class="rm-preview" src="roadmap-cloud.png" alt="Cloud Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('sec')">
-    <span class="rm-icon">🔒</span>
-    <h3>Cybersecurity Analyst</h3>
-    <p>Security+ · SIEM · OWASP · SOC</p>
-    <img class="rm-preview" src="roadmap-cybersecurity.png" alt="Security Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('data')">
-    <span class="rm-icon">📈</span>
-    <h3>Data Analyst / ML</h3>
-    <p>Python · Power BI · ML · Analytics</p>
-    <img class="rm-preview" src="roadmap-data.png" alt="Data Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('devops')">
-    <span class="rm-icon">⚙️</span>
-    <h3>DevOps / SRE</h3>
-    <p>Docker · K8s · CI/CD · Terraform</p>
-    <img class="rm-preview" src="roadmap-devops.png" alt="DevOps Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('dba')">
-    <span class="rm-icon">🗄️</span>
-    <h3>Database Administrator</h3>
-    <p>SQL · Oracle · MongoDB · ETL</p>
-    <img class="rm-preview" src="roadmap-dba.png" alt="DBA Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
-  <div class="rm-card" onclick="showImg('qa')">
-    <span class="rm-icon">🧪</span>
-    <h3>QA Engineer</h3>
-    <p>Selenium · ISTQB · Postman · Testing</p>
-    <img class="rm-preview" src="roadmap-qa.png" alt="QA Roadmap Preview" onerror="this.style.display='none'"/>
-  </div>
+<h3>Syllabus</h3>
+
+<table class="table table-bordered mt-3">
+<tr>
+<th>Unit</th>
+<th>Topics</th>
+</tr>
+
+<tr>
+<td>Unit I</td>
+<td align="justify"><b>Modern Application Platforms</b> 
+ 
+Introduction to modern application platforms, Introduction concept: distributed systems, Agility:  user stories and acceptance test cases, Modelling: Requirements, Technology: Web, Web Stock and REST,Technology: Synchronous Controllers and asynchronous Web flux mapping- Workshop using user stories, spring boot framework, synchronous controllers, and Asynchronous Web Flux sockets. Ploygot Persistence,Introduction Concept: Distributed Database, Technology: NoSQL and NewSQL Data modellig. Agility: Product Backlog, Modelling: Data, Technology: Mapping to Repositories, Workshop using Document Database 
+and RDBMS. CA Project Instructions briefing, Service Fundamentals Introduction Concept: Cloud Computing Introduction, Agility: Pair Programming, Modelling: user Interface Technology Service design and API 
+end points, Technology: Mapping Entities to Repositories, Workshop using service components, data access components and API endpoints. 
+ </td>
+</tr>
+
+<tr>
+<td>Unit II</td>
+<td align="justify"><b>Full Stack Components</b>Full Stack Components: Introduction Concept: Distributed Service communication, Agility: Test Driven Development, Modelling: Technical Backlog, Technology: Reactive Client-side Technologies, Technology: Build 
+tools and Test automation, Technology: End to End Application Layering, Workshop using Synchronous components and client side. CA Project Mile stone MVP Submission, Cloud Native Reference Architecture, 
+Introduction Concept: Cloud managed services (distributed), Modeling: Architectural Prototype, Technology: Reference Architecture, Technology: Cloud Native Design, Technology: Container Kuberetes part 1. </td>
+</tr>
+
+<tr>
+<td>Unit III</td>
+<td align="justify"><b>Micro Services</b>Micro services Architecture: Introduction Concept: Domain Drive Design, Modelling: Bounded Context, Workshop using end to end layering of components and cloud hosting, and Technology: Element of micro 
+services and implementation mechanism, Technology: Container - Kubernetes part 2, Technology: Inter-micro services communication, Workshop for moving from monolithic to microservices components. CA 
+Project milestone Archetype Submission, Serverless Architecture, Introduction Concept: Function as a service, Modelling: Functions, Technology: Elements of functions and workflow implementation mechanism  </td>
+</tr>
+
+<tr>
+<td>Unit IV</td>
+<td align="justify"><b>Functions and Containers</b>Technology: Functions Vs Containers (Kubernetes vs Kubeless), Technology: Inter-functional communication, Workshop using  serverless functions, Event Driven Architecture, Introduction Concept : Work Queue 
+Systems, Technology : Producer, Consumer and Messages, Technology: Event Brokers versus message Brokers, Technology: Event-Driven Processing, Workshop using Event driven messages (both producers 
+and consumer) and processing the same Design for Scalability, Introduction Concept: Application scaling, Concept: Data Scaling, Caching and Replication, Concept: Distributed systems communication Technology: 
+Container orchestrated scaling and replication. </td>
+</tr>
+
+<tr>
+<td>Unit V</td>
+<td align="justify"><b>Container Hosting</b>Workshop for container hosting, CA project milestone First Iteration Submission, Metrics, Monitoring and Performance Engineering, Introduction Concept: Quality metrics for non-functional Requirements, Concept: 
+Distributed tracing for profiling an monitoring concept: Performance Engineering, Technology: Contain orchestrated scaling and replication, Workshop for performance engineering, Security Architecture for Modern 
+Platforms, Introduction Concept: Distributed Service Security, Modelling: Threat models and SWOT Analysis, Technology: Identity and access management, Technology: Data asset classification and Protection, 
+Technology: Container security,  Workshop for Security Implementation Platform Reliability Engineering, Introduction concept: Distributed service reliability, Technology: Service Level Indicators, Workshop for 
+reliability Implementation.</td>
+</tr>
+<tr>
+<td>Learning Resources</td>
+<td align="justify"><b><ol><li>	Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert C. Martin; published by: Pearson; publication date: September 2017.
+</li> <li>	Johnson, Rod, et al. "The spring framework–reference documentation." interface 21 (2004): 27. 
+</li> <li>	Walls, Craig. Spring in action. Simon and Schuster, 2022.
+</li> <li>White, Joshua, and Willie Wheeler. Spring in practice. Simon and Schuster, 2013. </li> <li> Boduch, Adam, and Roy Derks. React and React Native: A complete hands-on guide to modern web and mobile development with React. js. Packt Publishing Ltd, 2020.</li></ol>
+</td>
+</tr>
+</table>
+
 </div>
 
-<!-- Domain Filter for Curriculum Table -->
-<h3 style="margin-top:24px;margin-bottom:10px">📑 Semester-wise Curriculum Table</h3>
-<div class="flt" id="cFlt">
-<button class="fb on" onclick="cF('all',this)">All</button>
-<button class="fb" onclick="cF('Networking',this)">🌐 Networking</button>
-<button class="fb" onclick="cF('Programming',this)">💻 Programming</button>
-<button class="fb" onclick="cF('Cloud',this)">☁️ Cloud</button>
-<button class="fb" onclick="cF('Cyber Security',this)">🔒 Security</button>
-<button class="fb" onclick="cF('Database',this)">🗄️ Database</button>
-<button class="fb" onclick="cF('Artificial Intelligence',this)">🤖 AI/ML</button>
-<button class="fb" onclick="cF('Web Development',this)">🌍 Web Dev</button>
-<button class="fb" onclick="cF('Software Engineering',this)">⚙️ SE</button>
-<button class="fb" onclick="cF('Mathematics',this)">📐 Maths</button>
-<button class="fb" onclick="cF('Data Science',this)">📈 Data Sci</button>
+<!-- LESSON PLAN -->
+
+<div class="section searchable" id="lesson">
+
+<h3>Lesson Plan</h3>
+
+<table class="table table-striped">
+
+<tr>
+<th>Period</th>
+<th>Topic</th>
+</tr>
+<tr><th>Unit-1</th><th>Modern Application Platforms</th></tr>
+<tr><td>1</td><td>Intro to Modern Platforms & Distributed Systems</td></tr>
+<tr><td>2</td><td>Agility: User Stories & Acceptance Tests</td></tr>
+<tr><td>3</td><td>Modeling: Requirements & Distributed Logic</td></tr>
+<tr><td>4</td><td>Tech: Web Stock, REST & API Endpoints</td></tr>
+<tr><td>5</td><td>Sync Controllers vs Asynchronous Web Flux</td></tr>
+<tr><td>6</td><td>Polyglot Persistence: NoSQL & NewSQL</td></tr>
+<tr><td>7</td><td>Data Modeling & Mapping to Repositories</td></tr>
+<tr><td>8</td><td>Workshop: Document DB & RDBMS Integration</td></tr>
+<tr><td>9</td><td>Workshop: Spring Boot & Web Flux Mapping</td></tr>
+<tr><th>Unit-2</th><th>Full Stack Components</th></tr>
+<tr><td>10</td><td>Distributed Service Communication Intro </td></tr>
+<tr><td>11</td><td>Agility: Test Driven Development (TDD) </td></tr>
+<tr><td>12</td><td>Modeling: Technical Backlog Construction </td></tr>
+<tr><td>13</td><td>Technology: Reactive Client-side Tech </td></tr>
+<tr><td>14</td><td>Build Tools & Test Automation </td></tr>
+<tr><td>15</td><td>End-to-End Application Layering </td></tr>
+<tr><td>16</td><td>Workshop: Synchronous Components & Client </td></tr>
+<tr><td>17</td><td>Cloud Native Reference Architecture </td></tr>
+<tr><td>18</td><td>Technology: Container Kubernetes Part 1 </td></tr>
+<tr><th>Unit-3</th><th>Micro Services</th></tr>
+<tr><td>19</td><td>Intro to Domain-Driven Design (DDD) </td></tr>
+<tr><td>20</td><td>Modeling: Bounded Context </td></tr>
+<tr><td>21</td><td>Workshop: End-to-End Layering & Hosting </td></tr>
+<tr><td>22</td><td>Elements of Microservices & Mechanisms </td></tr>
+<tr><td>23</td><td>Kubernetes Part 2: Advanced Concepts </td></tr>
+<tr><td>24</td><td>Inter-microservice Communication </td></tr>
+<tr><td>25</td><td>Workshop: Monolith to Microservices </td></tr>
+<tr><td>26</td><td>Serverless Architecture & FaaS Concept </td></tr>
+<tr><td>27</td><td>Modeling Functions & Workflow Mechanisms </td></tr>
+<tr><th>Unit-4</th><th>Functions and Containers</th></tr>
+<tr><td>28</td><td>Functions vs Containers (K8s vs Kubeless) </td></tr>
+<tr><td>29</td><td>Inter-functional Communication </td></tr>
+<tr><td>30</td><td>Workshop: Serverless Functions </td></tr>
+<tr><td>31</td><td>Event Driven Architecture: Work Queues</td></tr>
+<tr><td>32</td><td>Producer, Consumer and Messages </td></tr>
+<tr><td>33</td><td>Event Brokers versus Message Brokers </td></tr>
+<tr><td>34</td><td>Workshop: Event-Driven Processing </td></tr>
+<tr><td>35</td><td>Design for Scalability: App & Data Scaling </td></tr>
+<tr><td>36</td><td>Caching and Replication in Distributed Sys </td></tr>
+<tr><th>Unit-5</th><td>Container Hosting</td></tr>
+<tr><td>37</td><td>Workshop: Container Hosting </td></tr>
+<tr><td>38</td><td>Metrics, Monitoring & Quality Metrics </td></tr>
+<tr><td>39</td><td>Distributed Tracing & Performance Eng. </td></tr>
+<tr><td>40</td><td>Workshop: Performance Engineering </td></tr>
+<tr><td>41</td><td>Security Architecture: Threat Models </td></tr>
+<tr><td>42</td><td>Identity & Access Management (IAM) </td></tr>
+<tr><td>43</td><td>Container Security & Data Protection </td></tr>
+<tr><td>44</td><td>Workshop: Security Implementation </td></tr>
+<tr><td>45</td><td>Platform Reliability Engineering (SRE) </td></tr>
+
+</table>
+
 </div>
-<div class="ctbl-wrap">
-<table class="ctbl" id="cTbl">
-<thead><tr><th>Sem</th><th>Code</th><th>Course Name</th><th>Nature</th><th>Prereq</th><th>Prereq Course</th><th>Postreq</th><th>Postreq Course</th><th>Domain</th></tr></thead>
-<tbody id="cBody"></tbody>
+
+<!-- OBE -->
+
+<div class="section searchable" id="obe">
+
+<h3>Outcome Based Education (OBE)</h3>
+
+<ul>
+<li>CO1 - demonstrate events, perform state updates, and manage conditional content; Apply styles dynamically 
+and conditionally to create a modern UI .</li>
+<li>CO2 - implement components and stereotypes to satisfy given business requirements that could include both 
+synchronous and asynchronous web applications .</li>
+<li>CO3 - design and implement a scalable polyglot persistence layer including regular star schema and document 
+store .</li>
+<li>CO4 - design independent, composable, loosely coupled services that integrate well with device independent 
+frontend UI components of modern platforms .</li>
+<li>CO5 - build non-functional characteristics such as scalability, performance engineering and security aspects 
+into the solution .</li>
+</ul>
+
+</div>
+
+<!-- GAP -->
+
+<div class="section searchable" id="gap">
+
+<h3>Gap Between Syllabus & Industrial Needs</h3>
+
+<table class="table table-bordered">
+
+<tr>
+<th> Case Study Report</th>
+<th>Background and Scenario </th>
+<th>Proposed Advanced Solution</th>
+</tr>
+
+<tr>
+<td>NanCo Art Services Company</td>
+<td align="justify">NanCo Art Services operates the "ArtPort" application suite (Gallery, Museum, and Consumer versions). As the company expanded globally, users reported severe scalability and performance issues. The applications were built as in-house monoliths, making them expensive to update and slow to load.</td>
+ 
+<td align="justify">The "Refactor and Augment" Strategy Instead of a simple "Lift and Shift," NanCo should adopt a Refactor strategy, breaking the monolith into microservices while using advanced single-node patterns to bridge the gap</td>
+ 
+</tr>
+
+</table>
+
+</div>
+
+<!-- BEYOND SYLLABUS -->
+
+<div class="section searchable" id="beyond">
+
+<h3>Content Beyond Syllabus</h3>
+<p align="justify">
+The current Cloud Native Architecture for Modern Platforms (21CSE477T) syllabus, the course already covers foundational cloud-native technologies such as Spring Boot, ReactJS, Microservices, Kubernetes, Serverless, Event-Driven Architecture, Security, Performance Engineering, and Reliability Engineering.
+However, industry requirements in 2026 have moved beyond traditional cloud-native development. The following Content Beyond Syllabus topics will significantly improve student employability and align with current demands from companies such as Google, Microsoft, Amazon, IBM, Dell, Accenture, Cognizant, Zoho, Infosys, TCS, and VMware.
+</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped table-hover align-middle">
+
+<thead class="table-dark">
+<tr>
+    <th width="5%">S.No</th>
+    <th width="20%">Content Beyond Syllabus Topic</th>
+    <th width="15%">Industry Need / Gap</th>
+    <th width="30%">Topics Covered</th>
+    <th width="15%">Tools / Technologies</th>
+    <th width="15%">Mini Project / Practical</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>1</td>
+    <td><strong>AI-Native Cloud Architecture</strong></td>
+    <td>Modern applications are increasingly AI-powered.</td>
+    <td>
+        • Large Language Models (LLMs)<br>
+        • Generative AI Integration<br>
+        • AI Agents<br>
+        • Retrieval Augmented Generation (RAG)<br>
+        • Vector Databases<br>
+        • Prompt Engineering<br>
+        • AI Microservices
+    </td>
+    <td>
+        OpenAI API<br>
+        LangChain<br>
+        LangGraph<br>
+        Ollama<br>
+        LlamaIndex<br>
+        ChromaDB<br>
+        Pinecone
+    </td>
+    <td>AI-Powered Cloud Helpdesk Assistant</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td><strong>Platform Engineering</strong></td>
+    <td>
+        Kubernetes is covered, but Platform Engineering is not included in the syllabus.
+    </td>
+    <td>
+        • Internal Developer Platforms (IDP)<br>
+        • Golden Path Architecture<br>
+        • Backstage Developer Portal<br>
+        • Self-Service Infrastructure
+    </td>
+    <td>
+        Backstage.io<br>
+        Crossplane<br>
+        Terraform<br>
+        ArgoCD
+    </td>
+    <td>
+        Industry Demand:<br>
+        Spotify, Netflix, Google, VMware
+    </td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td><strong>GitOps & Continuous Delivery</strong></td>
+    <td>
+        Modern cloud deployments require automated CI/CD pipelines.
+    </td>
+    <td>
+        • GitOps Workflow<br>
+        • Infrastructure as Code<br>
+        • Continuous Deployment<br>
+        • Progressive Delivery
+    </td>
+    <td>
+        ArgoCD<br>
+        FluxCD<br>
+        GitHub Actions<br>
+        Jenkins X
+    </td>
+    <td>
+        Deploy a Microservice using GitOps
+    </td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td><strong>Kubernetes Advanced Operations</strong></td>
+    <td>
+        Industry expects advanced Kubernetes administration and orchestration.
+    </td>
+    <td>
+        • Service Mesh<br>
+        • Multi-Cluster Kubernetes<br>
+        • Cluster Federation<br>
+        • Operators<br>
+        • Helm Charts<br>
+        • Kustomize
+    </td>
+    <td>
+        Istio<br>
+        Linkerd<br>
+        Helm<br>
+        Rancher
+    </td>
+    <td>
+        Enterprise Kubernetes Deployment
+    </td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td><strong>Cloud Security & Zero Trust</strong></td>
+    <td>
+        Security is shifting towards Zero Trust Architecture.
+    </td>
+    <td>
+        • Zero Trust Architecture<br>
+        • DevSecOps<br>
+        • API Security<br>
+        • Secrets Management<br>
+        • Software Supply Chain Security
+    </td>
+    <td>
+        Vault<br>
+        Trivy<br>
+        Snyk<br>
+        OWASP ZAP
+    </td>
+    <td>
+        Case Study: SolarWinds Attack
+    </td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td><strong>Cloud FinOps</strong></td>
+    <td>
+        Organizations need cost-optimized cloud infrastructure.
+    </td>
+    <td>
+        • FinOps Framework<br>
+        • Cost Optimization<br>
+        • Resource Tagging<br>
+        • Rightsizing
+    </td>
+    <td>
+        AWS Cost Explorer<br>
+        Azure Cost Management
+    </td>
+    <td>
+        Optimize Kubernetes Cluster Budget
+    </td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td><strong>Observability Engineering</strong></td>
+    <td>
+        Industry requires complete observability beyond monitoring.
+    </td>
+    <td>
+        • Distributed Observability<br>
+        • OpenTelemetry<br>
+        • Log Analytics<br>
+        • Trace Analytics
+    </td>
+    <td>
+        Prometheus<br>
+        Grafana<br>
+        Jaeger<br>
+        Loki
+    </td>
+    <td>
+        Observe a Microservice Architecture
+    </td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td><strong>Event Streaming Platforms</strong></td>
+    <td>
+        Real-time processing is essential in modern enterprises.
+    </td>
+    <td>
+        • Real-Time Data Pipelines<br>
+        • Event Sourcing<br>
+        • CQRS<br>
+        • Stream Processing
+    </td>
+    <td>
+        Apache Kafka<br>
+        Confluent<br>
+        Apache Pulsar
+    </td>
+    <td>
+        Real-Time Order Processing System
+    </td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td><strong>Cloud-Native Data Engineering</strong></td>
+    <td>
+        Organizations require scalable cloud-based analytics.
+    </td>
+    <td>
+        • Data Lakes<br>
+        • Lakehouse Architecture<br>
+        • Real-Time ETL<br>
+        • Streaming Analytics
+    </td>
+    <td>
+        Apache Spark<br>
+        Delta Lake<br>
+        Airflow
+    </td>
+    <td>
+        Cloud Analytics Platform
+    </td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td><strong>Edge Computing & IoT Cloud</strong></td>
+    <td>
+        Smart Cities, Industry 4.0, and IoT applications require edge computing.
+    </td>
+    <td>
+        • Edge Kubernetes<br>
+        • IoT Gateways<br>
+        • Edge AI<br>
+        • Fog Computing
+    </td>
+    <td>
+        K3s<br>
+        Azure IoT Hub<br>
+        AWS Greengrass
+    </td>
+    <td>
+        Smart Agriculture Monitoring System
+    </td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td><strong>Cloud-Native AI Ops</strong></td>
+    <td>
+        AI-driven operations improve reliability and automation.
+    </td>
+    <td>
+        • Predictive Scaling<br>
+        • Self-Healing Systems<br>
+        • Intelligent Monitoring<br>
+        • Anomaly Detection
+    </td>
+    <td>
+        Kubecost<br>
+        Dynatrace<br>
+        Datadog AI
+    </td>
+    <td>
+        AI-Based Auto Scaling Engine
+    </td>
+</tr>
+
+<tr>
+    <td>12</td>
+    <td><strong>Modern Architectural Patterns</strong></td>
+    <td>
+        Industry uses advanced patterns beyond traditional microservices.
+    </td>
+    <td>
+        • Sidecar Pattern<br>
+        • Ambassador Pattern<br>
+        • Circuit Breaker<br>
+        • Saga Pattern<br>
+        • CQRS Pattern<br>
+        • Event Sourcing<br>
+        • Strangler Pattern
+    </td>
+    <td>
+        Istio<br>
+        Envoy<br>
+        Netflix OSS
+    </td>
+    <td>
+        Industry Use:<br>
+        Netflix, Uber, Amazon
+    </td>
+</tr>
+
+<tr>
+    <td>13</td>
+    <td><strong>Multi-Cloud & Hybrid Cloud</strong></td>
+    <td>
+        Organizations avoid vendor lock-in through multi-cloud strategies.
+    </td>
+    <td>
+        • AWS<br>
+        • Azure<br>
+        • Google Cloud<br>
+        • Hybrid Cloud
+    </td>
+    <td>
+        AWS<br>
+        Azure<br>
+        GCP
+    </td>
+    <td>
+        Deploy Application Across Multiple Clouds
+    </td>
+</tr>
+
+<tr>
+    <td>14</td>
+    <td><strong>Cloud Native Application Modernization</strong></td>
+    <td>
+        Enterprises are modernizing legacy applications.
+    </td>
+    <td>
+        • Legacy Modernization<br>
+        • Application Refactoring<br>
+        • Cloud Migration<br>
+        • Replatforming
+    </td>
+    <td>
+        AWS Migration Hub<br>
+        Azure Migrate<br>
+        Google Migrate
+    </td>
+    <td>
+        Case Studies:<br>
+        Netflix, Uber, Spotify, Airbnb
+    </td>
+</tr>
+
+<tr>
+    <td>15</td>
+    <td><strong>Industry Certification Preparation</strong></td>
+    <td>
+        Certifications improve employability and industry readiness.
+    </td>
+    <td>
+        AWS:<br>
+        • AWS Cloud Practitioner<br>
+        • AWS Solutions Architect<br><br>
+
+        Microsoft:<br>
+        • Azure Fundamentals (AZ-900)<br>
+        • Azure Administrator<br><br>
+
+        Kubernetes:<br>
+        • KCNA<br>
+        • CKA<br>
+        • CKAD<br><br>
+
+        CNCF:<br>
+        • Cloud Native Associate
+    </td>
+    <td>
+        AWS<br>
+        Azure<br>
+        CNCF<br>
+        Kubernetes
+    </td>
+    <td>
+        Certification Preparation & Mock Exams
+    </td>
+</tr>
+
+</tbody>
+
 </table>
 </div>
-</section>
+<!-- rubrics matrics   -->
+ 
+<div class="table-responsive">
 
-<!-- GAP ANALYSIS -->
-<section class="sec" id="gap">
-<div class="sh"><h2>📊 Curriculum Gap Analysis</h2><p>What syllabus covers vs company expectations.</p></div>
-<div class="gc" id="gcEl"></div>
-<div class="tw" style="margin-top:14px"><table>
-<thead><tr><th>Requirement</th><th>Covered?</th><th>Gap</th><th>Bridge</th></tr></thead>
+<h3 class="text-center text-primary">
+ Evaluation Rubric Matrics (50 Marks)-15-week
+</h3>
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+
+<tr>
+<th width="5%">S.No</th>
+<th width="30%">Evaluation Criteria</th>
+<th width="10%">CO Mapping</th>
+<th width="10%">PO Mapping</th>
+<th width="10%">Weightage</th>
+<th width="35%">Assessment Indicators</th>
+</tr>
+
+</thead>
+
 <tbody>
-<tr><td>Git/CI</td><td>Partially</td><td>No branching, PR, CI/CD</td><td>NPTEL SE + GitHub Labs</td></tr>
-<tr><td>Linux</td><td>Via OS</td><td>Minimal hands-on</td><td>Linux Foundation, RHCSA</td></tr>
-<tr><td>Cloud</td><td>Elective</td><td>IAM, VPC, monitoring</td><td>AWS CCP → SAA</td></tr>
-<tr><td>DevOps</td><td>If chosen</td><td>Docker, K8s, CI/CD</td><td>Docker, GitHub Actions</td></tr>
-<tr><td>Net Labs</td><td>CN courses</td><td>Packet Tracer, Wireshark</td><td>CCNA, Network+</td></tr>
-<tr><td>Security</td><td>Crypto elective</td><td>SOC, SIEM, OWASP</td><td>Security+, TryHackMe</td></tr>
-<tr><td>APIs</td><td>Full Stack elective</td><td>REST, auth, deploy</td><td>Node/Spring/Django</td></tr>
-<tr><td>Analytics</td><td>DS, Big Data</td><td>Power BI, Tableau</td><td>Google DA, PL-300</td></tr>
-<tr><td>QA</td><td>SE course</td><td>Selenium, API testing</td><td>ISTQB, Selenium</td></tr>
-<tr><td>Placement</td><td>Aptitude courses</td><td>Coding, portfolio</td><td>LeetCode, mocks</td></tr>
-</tbody></table></div>
-</section>
 
-<!-- VISUAL ROADMAP -->
-<section class="sec" id="vroad">
-<div class="sh"><h2>🗺️ Visual Semester Roadmap</h2><p>Filter by domain. Click role cards to view infographic.</p></div>
-<div class="flt" id="vF">
-<button class="fb on" onclick="vrF('all',this)">All</button>
-<button class="fb" onclick="vrF('cloud',this)">☁️ Cloud</button>
-<button class="fb" onclick="vrF('net',this)">🌐 Network</button>
-<button class="fb" onclick="vrF('sec',this)">🔒 Security</button>
-<button class="fb" onclick="vrF('swe',this)">💻 Software</button>
-<button class="fb" onclick="vrF('data',this)">📈 Data/AI</button>
-<button class="fb" onclick="vrF('devops',this)">⚙️ DevOps</button>
-</div>
-<div class="vr"><div class="vr-ln"></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--pri);box-shadow:0 0 0 3px #bfdbfe"></div><div class="vc"><h3><span class="sb2" style="background:var(--pri)">SEM I-II</span> Foundation</h3><p>C Programming, OOP Java, Data Structures, Maths, Physics, English</p><ul><li>Master C/Java, GitHub, 2 CLI projects, aptitude</li></ul></div></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--acc);box-shadow:0 0 0 3px #a5f3fc"></div><div class="vc"><h3><span class="sb2" style="background:var(--acc)">SEM III</span> Core CS</h3><p>DBMS, OS, Computer Architecture, Computer Networks</p><ul><li>200+ DSA problems, Linux basics, SQL mastery</li></ul></div></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--grn);box-shadow:0 0 0 3px #bbf7d0"></div><div class="vc"><h3><span class="sb2" style="background:var(--grn)">SEM IV</span> Algorithms, SE, Web, AI</h3><p>DAA, Software Engineering, Web Technologies, AI</p><ul><li>Build web project, explore domain interest</li></ul></div></div>
-<div class="vs" data-r="all cloud net sec data devops"><div class="vd" style="background:var(--org);box-shadow:0 0 0 3px #fed7aa"></div><div class="vc" style="border-left:4px solid var(--org)"><h3><span class="sb2" style="background:var(--org)">SEM V</span> 🔥 Domain Lock-In</h3><p>Cloud Computing, Info Security, Big Data Analytics, Mobile Dev</p>
-<div class="sg">
-<div class="cd" data-r="cloud" onclick="showImg('cloud')" style="cursor:pointer"><h3>☁️ Cloud</h3><p>View infographic →</p></div>
-<div class="cd" data-r="net" onclick="showImg('net')" style="cursor:pointer"><h3>🌐 Network</h3><p>View infographic →</p></div>
-<div class="cd" data-r="sec" onclick="showImg('sec')" style="cursor:pointer"><h3>🔒 Security</h3><p>View infographic →</p></div>
-<div class="cd" data-r="swe" onclick="showImg('swe')" style="cursor:pointer"><h3>💻 Software</h3><p>View infographic →</p></div>
-<div class="cd" data-r="data" onclick="showImg('data')" style="cursor:pointer"><h3>📈 Data/AI</h3><p>View infographic →</p></div>
-<div class="cd" data-r="devops" onclick="showImg('devops')" style="cursor:pointer"><h3>⚙️ DevOps</h3><p>View infographic →</p></div>
-</div></div></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--red);box-shadow:0 0 0 3px #fecaca"></div><div class="vc" style="border-left:4px solid var(--red)"><h3><span class="sb2" style="background:var(--red)">SEM VI</span> Certification + Internship</h3><p>ML, IoT, Cyber Security — complete one cert, do internship, deploy project</p></div></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--pur);box-shadow:0 0 0 3px #ddd6fe"></div><div class="vc" style="border-left:4px solid var(--pur)"><h3><span class="sb2" style="background:var(--pur)">SEM VII</span> Placement + Major Project I</h3><p>Placement drives, mock interviews, associate cert, GATE (if govt)</p></div></div>
-<div class="vs" data-r="all"><div class="vd" style="background:var(--pnk);box-shadow:0 0 0 3px #fbcfe8"></div><div class="vc" style="border-left:4px solid var(--pnk)"><h3><span class="sb2" style="background:var(--pnk)">SEM VIII</span> Major Project II + Launch</h3><p>Domain-aligned major project, internship, career launch</p></div></div>
-</div>
-</section>
+<tr>
+<td>1</td>
+<td>
+Problem Identification & Industry Relevance
+</td>
+<td>
+CO1
+</td>
+<td>
+PO1, PO2
+</td>
+<td>
+5
+</td>
+<td>
+Ability to identify a real-world cloud-native problem aligned with industry needs such as AI, Platform Engineering, DevSecOps, FinOps, Observability, or Multi-Cloud Computing.
+</td>
+</tr>
 
-<!-- ROLE CARDS -->
-<section class="sec" id="roles">
-<div class="sh"><h2>💼 All IT Roles — Click for Infographic</h2></div>
-<div class="g g2" id="rG">
-<div class="cd rc" data-c="net" onclick="showImg('net')" style="cursor:pointer"><h3>🌐 Network Engineer</h3><p>Cisco, HCL, TCS, Airtel, Jio</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="swe" onclick="showImg('swe')" style="cursor:pointer"><h3>💻 Software Engineer</h3><p>TCS, Zoho, Freshworks, Amazon</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="cloud" onclick="showImg('cloud')" style="cursor:pointer"><h3>☁️ Cloud Engineer</h3><p>AWS, Microsoft, Accenture, Deloitte</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="sec" onclick="showImg('sec')" style="cursor:pointer"><h3>🔒 Cybersecurity Analyst</h3><p>IBM, Deloitte, EY, Palo Alto</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="data" onclick="showImg('data')" style="cursor:pointer"><h3>📈 Data Analyst / ML</h3><p>Mu Sigma, Fractal, TCS, Amazon</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="devops" onclick="showImg('devops')" style="cursor:pointer"><h3>⚙️ DevOps / SRE</h3><p>Accenture, IBM, Thoughtworks</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="dba" onclick="showImg('dba')" style="cursor:pointer"><h3>🗄️ DBA / Data Engineer</h3><p>Oracle, IBM, TCS, Banks</p><span class="glow-link">View Roadmap Infographic</span></div>
-<div class="cd rc" data-c="qa" onclick="showImg('qa')" style="cursor:pointer"><h3>🧪 QA Engineer</h3><p>Infosys, Cognizant, Wipro, TCS</p><span class="glow-link">View Roadmap Infographic</span></div>
-</div>
-</section>
+<tr>
+<td>2</td>
+<td>
+Solution Design & Architecture
+</td>
+<td>
+CO2, CO4
+</td>
+<td>
+PO3
+</td>
+<td>
+10
+</td>
+<td>
+Cloud-native architecture design, microservices decomposition, API design, scalability, modularity, and use of architecture diagrams.
+</td>
+</tr>
 
-<!-- COURSE MAPPING -->
-<section class="sec" id="map">
-<div class="sh"><h2>📚 Bridge Courses: NPTEL · Coursera · Udemy</h2></div>
-<div class="tw"><table>
-<thead><tr><th>Domain</th><th>Syllabus</th><th>Gap</th><th>NPTEL</th><th>Coursera</th><th>Udemy</th></tr></thead>
+<tr>
+<td>3</td>
+<td>
+Technology Implementation
+</td>
+<td>
+CO2, CO3
+</td>
+<td>
+PO5
+</td>
+<td>
+10
+</td>
+<td>
+Effective use of modern tools such as Spring Boot, ReactJS, Kubernetes, Docker, Kafka, Ollama, LangChain, GitOps tools, or Observability platforms.
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>
+Innovation & Emerging Technology Adoption
+</td>
+<td>
+CO3, CO4
+</td>
+<td>
+PO3, PO5, PSO1
+</td>
+<td>
+5
+</td>
+<td>
+Integration of emerging technologies such as Generative AI, RAG, Platform Engineering, Service Mesh, AI Ops, Edge Computing, or Multi-Cloud deployment.
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>
+Scalability, Security & Reliability
+</td>
+<td>
+CO5
+</td>
+<td>
+PO2, PO4, PO5
+</td>
+<td>
+5
+</td>
+<td>
+Implementation of security, observability, monitoring, fault tolerance, scalability, and reliability engineering concepts.
+</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>
+Testing, Validation & Demonstration
+</td>
+<td>
+CO2, CO5
+</td>
+<td>
+PO4
+</td>
+<td>
+5
+</td>
+<td>
+Functional testing, deployment validation, CI/CD demonstration, performance evaluation, and evidence-based results.
+</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>
+Documentation & Technical Report
+</td>
+<td>
+CO1, CO4
+</td>
+<td>
+PO10
+</td>
+<td>
+5
+</td>
+<td>
+Quality of project report, architecture diagrams, deployment steps, screenshots, references, and technical documentation.
+</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>
+Presentation, Viva & Team Contribution
+</td>
+<td>
+CO1
+</td>
+<td>
+PO9, PO10, PO12
+</td>
+<td>
+5
+</td>
+<td>
+Communication skills, technical understanding, teamwork, project presentation, and ability to answer technical questions.
+</td>
+</tr>
+
+</tbody>
+
+<tfoot class="table-success">
+
+<tr>
+<th colspan="4">
+TOTAL
+</th>
+<th>
+50
+</th>
+<th>
+Project-Based Evaluation
+</th>
+</tr>
+
+</tfoot>
+
+</table>
+
+</div>
+  
+<div class="table-responsive">
+
+<h4 class="text-primary">
+Performance Level Descriptor
+</h4>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-dark">
+
+<tr>
+<th>Level</th>
+<th>Marks Range</th>
+<th>Description</th>
+</tr>
+
+</thead>
+
 <tbody>
-<tr><td><b>Network</b></td><td>CN, Info Security</td><td>Routing, Wireshark</td><td>CN & Internet Protocol</td><td>Google IT Support</td><td>CCNA 200-301</td></tr>
-<tr><td><b>Software</b></td><td>OOP, DSA, SE, Web</td><td>Git, API, framework</td><td>Java · DSA · SE</td><td>Meta Front-End</td><td>Web Dev Bootcamp</td></tr>
-<tr><td><b>Cloud</b></td><td>Cloud, OS, CN</td><td>AWS, Terraform</td><td>Cloud Computing</td><td>AWS Architect</td><td>AWS SAA (Maarek)</td></tr>
-<tr><td><b>Security</b></td><td>Info Sec, Cyber Sec</td><td>SOC, SIEM, OWASP</td><td>Ethical Hacking</td><td>Google Cybersec</td><td>Security+</td></tr>
-<tr><td><b>Data/AI</b></td><td>AI, ML, Big Data</td><td>Power BI, deployment</td><td>ML (IIT-M)</td><td>Google DA</td><td>Python DS</td></tr>
-<tr><td><b>DevOps</b></td><td>OS, CN, Cloud</td><td>Docker, K8s, CI/CD</td><td>Cloud Computing</td><td>IBM DevOps</td><td>Docker & K8s</td></tr>
-<tr><td><b>DBA</b></td><td>DBMS, Big Data</td><td>Advanced SQL, ETL</td><td>DBMS</td><td>IBM Data Eng</td><td>Oracle DBA</td></tr>
-<tr><td><b>QA</b></td><td>SE, Programming</td><td>Selenium, API test</td><td>Software Testing</td><td>Testing & Auto</td><td>Selenium · ISTQB</td></tr>
-</tbody></table></div>
-</section>
 
-<!-- CERTS -->
-<section class="sec" id="certs">
-<div class="sh"><h2>🏅 Certifications</h2></div>
-<div class="g g3">
-<div class="cd"><h3>🌐 Network</h3><ul><li>CCNA</li><li>Network+</li><li>JNCIA</li><li>Fortinet NSE</li></ul></div>
-<div class="cd"><h3>☁️ Cloud</h3><ul><li>AWS CCP → SAA</li><li>AZ-900 → AZ-104</li><li>Google ACE</li></ul></div>
-<div class="cd"><h3>🔒 Security</h3><ul><li>ISC2 CC</li><li>Security+</li><li>SC-900</li><li>CEH</li></ul></div>
-<div class="cd"><h3>💻 Software</h3><ul><li>Oracle Java</li><li>Meta Front-End</li><li>MongoDB</li></ul></div>
-<div class="cd"><h3>📈 Data/AI</h3><ul><li>Google DA</li><li>PL-300</li><li>TensorFlow</li></ul></div>
-<div class="cd"><h3>⚙️ DevOps</h3><ul><li>Terraform</li><li>CKA</li><li>AWS Dev</li></ul></div>
+<tr>
+<td>Excellent</td>
+<td>90% - 100%</td>
+<td>
+Innovative solution with complete implementation, industry relevance, excellent architecture, deployment, security, scalability, documentation, and presentation.
+</td>
+</tr>
+
+<tr>
+<td>Very Good</td>
+<td>75% - 89%</td>
+<td>
+Well-designed solution with minor limitations and good adoption of cloud-native technologies.
+</td>
+</tr>
+
+<tr>
+<td>Good</td>
+<td>60% - 74%</td>
+<td>
+Functional implementation with adequate architecture and documentation.
+</td>
+</tr>
+
+<tr>
+<td>Satisfactory</td>
+<td>50% - 59%</td>
+<td>
+Basic implementation with limited industry alignment and incomplete features.
+</td>
+</tr>
+
+<tr>
+<td>Needs Improvement</td>
+<td>Below 50%</td>
+<td>
+Incomplete implementation, poor documentation, limited understanding of concepts.
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
 </div>
-</section>
+ 
 
-<!-- PROJECTS -->
-<section class="sec" id="proj">
-<div class="sh"><h2>🛠️ Projects</h2></div>
-<div class="g g2">
-<details open><summary>💻 Software <span class="ar">▸</span></summary><div class="db"><ul><li>E-commerce MERN app</li><li>REST API + JWT + Docker</li><li>Portfolio website</li></ul></div></details>
-<details><summary>🌐 Network <span class="ar">▸</span></summary><div class="db"><ul><li>Campus VLAN (Packet Tracer)</li><li>Wireshark analysis</li><li>Firewall simulation</li></ul></div></details>
-<details><summary>☁️ Cloud <span class="ar">▸</span></summary><div class="db"><ul><li>3-tier AWS app</li><li>Serverless pipeline</li><li>Terraform IaC</li></ul></div></details>
-<details><summary>🔒 Security <span class="ar">▸</span></summary><div class="db"><ul><li>OWASP on DVWA</li><li>SIEM dashboard</li><li>Phishing detector</li></ul></div></details>
-<details><summary>📈 Data/AI <span class="ar">▸</span></summary><div class="db"><ul><li>Power BI dashboard</li><li>Churn prediction</li><li>Sentiment analysis</li></ul></div></details>
-<details><summary>🗄️ DBA <span class="ar">▸</span></summary><div class="db"><ul><li>University DBMS</li><li>ETL pipeline</li><li>Backup & recovery</li></ul></div></details>
-<details><summary>🧪 QA <span class="ar">▸</span></summary><div class="db"><ul><li>Selenium test suite</li><li>Postman API tests</li><li>CI test pipeline</li></ul></div></details>
-</div>
-</section>
 
-<!-- GOVT -->
-<section class="sec" id="govt">
-<div class="sh"><h2>🏛️ Govt Jobs & Exams</h2></div>
-<div class="tw"><table>
-<thead><tr><th>Org</th><th>Role</th><th>Exam</th><th>Prep</th></tr></thead>
+<!-- matrics end  -->
+
+<!-- OBE -->
+<!-- =====================================================
+STUDENT LEARNING OUTCOMES AND KNOWLEDGE ATTAINMENT REPORT
+===================================================== -->
+
+<div class="container-fluid">
+
+<h2 class="text-center text-primary">
+Students Learning Outcomes and Knowledge Attainment Report
+</h2>
+
+<!-- ========================================= -->
+<!-- EXPECTED COMPETENCY GROWTH -->
+<!-- ========================================= -->
+
+<h3 class="text-success">
+Expected Competency Growth
+</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped table-hover">
+
+<thead class="table-dark">
+
+<tr>
+<th width="10%">S.No</th>
+<th width="20%">Stage</th>
+<th width="20%">Competency Level</th>
+<th width="50%" align="justify">Expected Learning Outcome</th>
+</tr>
+
+</thead>
+
 <tbody>
-<tr><td>ISRO</td><td>Scientist CS</td><td>ISRO CRB / GATE</td><td>DSA, OS, DBMS, CN, TOC</td></tr>
-<tr><td>DRDO</td><td>Scientist B</td><td>GATE + RAC</td><td>GATE CS syllabus</td></tr>
-<tr><td>NIC</td><td>Scientist B</td><td>NIELIT / GATE</td><td>Core CS + aptitude</td></tr>
-<tr><td>IBPS</td><td>IT Officer</td><td>IBPS SO IT</td><td>DBMS, networking, banking</td></tr>
-<tr><td>PSUs</td><td>Engr Trainee</td><td>GATE score</td><td>GATE CS</td></tr>
-</tbody></table></div>
-</section>
 
-<!-- PLACEMENT -->
-<section class="sec" id="place">
-<div class="sh"><h2>🎯 Placement Plan</h2></div>
-<div class="g g4">
-<div class="cd"><h3>Daily</h3><ul><li>2 DSA problems</li><li>30 min aptitude</li></ul></div>
-<div class="cd"><h3>Weekly</h3><ul><li>1 GitHub commit</li><li>1 mock interview</li></ul></div>
-<div class="cd"><h3>Monthly</h3><ul><li>1 project module</li><li>1 cert milestone</li></ul></div>
-<div class="cd"><h3>Before Placement</h3><ul><li>2 projects</li><li>1 cert</li><li>1 internship</li></ul></div>
+<tr>
+<td>1</td>
+<td>Before Course</td>
+<td>Beginner</td>
+<td>
+Basic awareness of cloud computing concepts and software development fundamentals.
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>After Core Syllabus</td>
+<td>Intermediate</td>
+<td>
+Ability to design and develop cloud-native applications using Spring Boot, ReactJS, REST APIs, Microservices, Kubernetes, and Serverless Computing.
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>After Labs & Mini Projects</td>
+<td>Advanced</td>
+<td>
+Ability to implement distributed systems, deploy cloud-native applications, configure containers, and apply scalability, security, and reliability principles.
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>After Content Beyond Syllabus Projects</td>
+<td>Industry Ready</td>
+<td>
+Ability to develop AI-powered cloud applications, implement GitOps, Platform Engineering, Service Mesh, Event Streaming, Observability, and Multi-Cloud solutions.
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>After Certification Preparation</td>
+<td>Job Ready</td>
+<td>
+Ability to perform cloud-native development, DevOps automation, Kubernetes administration, cloud deployment, and enterprise solution design in professional environments.
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
 </div>
-</section>
 
-<div class="ft">B.Tech IT Career Intelligence Portal · © 2025</div>
-</main>
+<br>
+
+<!-- ========================================= -->
+<!-- RECOMMENDED CERTIFICATIONS -->
+<!-- ========================================= -->
+
+<h3 class="text-primary">
+Recommended Certifications After Completing the Course
+</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped table-hover">
+
+<thead class="table-dark">
+
+<tr>
+<th width="10%">S.No</th>
+<th width="40%">Certification</th>
+<th width="20%">Domain</th>
+<th width="30%">Career Relevance</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>KCNA (Kubernetes and Cloud Native Associate)</td>
+<td>Cloud Native</td>
+<td>
+Foundation certification for cloud-native technologies and Kubernetes ecosystem.
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>CKA (Certified Kubernetes Administrator)</td>
+<td>Kubernetes Administration</td>
+<td>
+Prepares students for Kubernetes Administrator and DevOps Engineer roles.
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>CKAD (Certified Kubernetes Application Developer)</td>
+<td>Cloud Native Development</td>
+<td>
+Focuses on developing and deploying cloud-native applications using Kubernetes.
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>AWS Cloud Practitioner</td>
+<td>Cloud Computing</td>
+<td>
+Entry-level cloud certification recognized across industries.
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>AWS Solutions Architect Associate</td>
+<td>Cloud Architecture</td>
+<td>
+Develops skills in designing scalable and secure cloud solutions.
+</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Microsoft Azure Fundamentals (AZ-900)</td>
+<td>Cloud Fundamentals</td>
+<td>
+Introduces Azure services, cloud concepts, and deployment models.
+</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Azure Administrator (AZ-104)</td>
+<td>Cloud Administration</td>
+<td>
+Builds practical skills for Azure cloud deployment and management.
+</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>HashiCorp Terraform Associate</td>
+<td>Infrastructure as Code</td>
+<td>
+Develops automation and Infrastructure-as-Code expertise.
+</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>GitHub Actions Certification</td>
+<td>DevOps & CI/CD</td>
+<td>
+Validates CI/CD automation and GitOps deployment skills.
+</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>OpenTelemetry Foundation Learning Path</td>
+<td>Observability Engineering</td>
+<td>
+Provides skills in distributed tracing, monitoring, and observability.
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+ 
+<!-- =====================================================
+SDG ALIGNMENT REPORT
+Cloud Native Architecture for Modern Platforms
+===================================================== -->
+
+<div class="container-fluid">
+
+<h2 class="text-center text-success">
+Sustainable Development Goals (SDG) Alignment Report
+</h2>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped table-hover">
+
+<thead class="table-success">
+
+<tr>
+<th width="8%">SDG No.</th>
+<th width="25%">United Nations Sustainable Development Goal</th>
+<th width="30%">Course Contribution</th>
+<th width="37%">Student Learning & Project Outcomes</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><b>SDG 4</b></td>
+<td>
+Quality Education
+</td>
+<td>
+Promotes digital learning, cloud-native technologies, AI-enabled educational platforms, and industry-oriented skill development.
+</td>
+<td>
+Development of Cloud-Native LMS, AI-Powered Learning Assistants, and Digital Education Platforms.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 8</b></td>
+<td>
+Decent Work and Economic Growth
+</td>
+<td>
+Enhances employability through cloud computing, DevOps, Kubernetes, AI, and platform engineering skills.
+</td>
+<td>
+Preparation for roles such as Cloud Engineer, DevOps Engineer, Platform Engineer, and AI Cloud Engineer.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 9</b></td>
+<td>
+Industry, Innovation and Infrastructure
+</td>
+<td>
+Supports development of scalable digital infrastructure using cloud-native architectures and modern software engineering practices.
+</td>
+<td>
+Design of Microservices, Event-Driven Systems, Multi-Cloud Architectures, and Platform Engineering Solutions.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 11</b></td>
+<td>
+Sustainable Cities and Communities
+</td>
+<td>
+Supports smart city applications, IoT-enabled monitoring systems, and urban infrastructure modernization.
+</td>
+<td>
+Smart City Monitoring Systems, Edge Computing Platforms, and Smart Agriculture Solutions.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 12</b></td>
+<td>
+Responsible Consumption and Production
+</td>
+<td>
+Promotes efficient resource utilization through Cloud FinOps, container optimization, and infrastructure automation.
+</td>
+<td>
+Cloud Cost Optimization Dashboards, FinOps Solutions, and Resource Monitoring Platforms.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 13</b></td>
+<td>
+Climate Action
+</td>
+<td>
+Cloud-native technologies reduce energy consumption through efficient resource scaling and automated infrastructure management.
+</td>
+<td>
+Auto Scaling Systems, AI-Based Resource Optimization, and Green Cloud Computing Projects.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 16</b></td>
+<td>
+Peace, Justice and Strong Institutions
+</td>
+<td>
+Promotes secure digital systems through Zero Trust Security, DevSecOps, IAM, and Cybersecurity practices.
+</td>
+<td>
+Secure Cloud Platforms, Identity Management Systems, and Security Monitoring Solutions.
+</td>
+</tr>
+
+<tr>
+<td><b>SDG 17</b></td>
+<td>
+Partnerships for the Goals
+</td>
+<td>
+Encourages collaboration through open-source ecosystems, cloud communities, and industry-academia partnerships.
+</td>
+<td>
+Open Source Contributions, Cloud Native Foundation Projects, and Collaborative Industry Projects.
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<br>
+
+<!-- =====================================================
+SDG ATTAINMENT LEVEL
+===================================================== -->
+
+<h3 class="text-primary">
+SDG Attainment Level Through Course Activities
+</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+
+<tr>
+<th>Activity</th>
+<th>Primary SDG Alignment</th>
+<th>Attainment Level</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Core Syllabus Learning</td>
+<td>SDG 4, SDG 8, SDG 9</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Laboratory Experiments</td>
+<td>SDG 4, SDG 9</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Mini Projects</td>
+<td>SDG 8, SDG 9, SDG 11</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Content Beyond Syllabus Projects</td>
+<td>SDG 8, SDG 9, SDG 11, SDG 13</td>
+<td>Very High</td>
+</tr>
+
+<tr>
+<td>AI-Native Cloud Projects</td>
+<td>SDG 4, SDG 8, SDG 9</td>
+<td>Very High</td>
+</tr>
+
+<tr>
+<td>Cloud FinOps Projects</td>
+<td>SDG 12, SDG 13</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Platform Engineering Projects</td>
+<td>SDG 8, SDG 9</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Security & DevSecOps Projects</td>
+<td>SDG 16</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Smart City & IoT Projects</td>
+<td>SDG 11, SDG 13</td>
+<td>Very High</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<br>
+
+<!-- =====================================================
+OVERALL SDG CONTRIBUTION
+===================================================== -->
+
+<h3 class="text-danger">
+Overall SDG Contribution Index
+</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+
+<tr>
+<th>SDG</th>
+<th>Contribution Level</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>SDG 4 - Quality Education</td><td>★★★★★ Excellent</td></tr>
+<tr><td>SDG 8 - Decent Work & Economic Growth</td><td>★★★★★ Excellent</td></tr>
+<tr><td>SDG 9 - Industry, Innovation & Infrastructure</td><td>★★★★★ Excellent</td></tr>
+<tr><td>SDG 11 - Sustainable Cities & Communities</td><td>★★★★☆ Very Good</td></tr>
+<tr><td>SDG 12 - Responsible Consumption</td><td>★★★★☆ Very Good</td></tr>
+<tr><td>SDG 13 - Climate Action</td><td>★★★★☆ Very Good</td></tr>
+<tr><td>SDG 16 - Peace, Justice & Strong Institutions</td><td>★★★★☆ Very Good</td></tr>
+<tr><td>SDG 17 - Partnerships for the Goals</td><td>★★★★☆ Very Good</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+ 
+
+
+<!-- OBE END  -->
+</div>
+
+<!-- LEARNING MATERIALS -->
+
+<div class="section searchable" id="materials">
+
+<h3>Learning Materials</h3>
+
+<div class="row">
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 1</h5>
+<p>Modern Application Platforms </p>
+<a href="../CNA/PPTs/CNA-Unit-1.pdf" class="btn btn-primary">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 2</h5>
+<p> Full Stack Components</p>
+<a href="../CNA/PPTs/CNA-Unit-2.pdf" class="btn btn-success">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 3</h5>
+<p>Micro Services</p>
+<a href="../CNA/PPTs/CNA-Unit-3.pdf" class="btn btn-warning">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 4</h5>
+<p>Functions and Containers</p>
+<a href="../CNA/PPTs/CNA-Unit-4.pdf" class="btn btn-info">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 unit-card">
+<div class="card">
+<div class="card-body">
+<h5>Unit 5</h5>
+<p>Container Hosting </p>
+<a href="../CNA/PPTs/CNA-Unit-5.pdf" class="btn btn-danger">
+Download PDF
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- QUESTION BANK -->
+
+<div class="section searchable" id="questionbank">
+
+<h3>Question Bank</h3>
+
+<div class="table-responsive">
+
+<!-- UNIT 1 -->
+
+<h3 class="text-primary">UNIT 1 - Modern Application Platforms</h3>
+
+<table class="table table-bordered table-striped">
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain the characteristics of modern application platforms and distributed systems.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss the role of User Stories and Acceptance Test Cases in Agile development.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>3</td><td>Differentiate between Synchronous Controllers and Asynchronous WebFlux Controllers.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain REST architecture and its importance in cloud-native applications.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>5</td><td>Describe Polyglot Persistence and its advantages.</td><td>K2</td><td>CO3</td><td>5</td></tr>
+
+<tr><td>6</td><td>Compare NoSQL and NewSQL databases.</td><td>K4</td><td>CO3</td><td>5</td></tr>
+
+<tr><td>7</td><td>Explain Product Backlog and its significance in Agile development.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr><td>8</td><td>Describe Repository Mapping in Spring Boot applications.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>9</td><td>Discuss the role of API Endpoints in Service-Oriented Architecture.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain the concept of Cloud Computing and Service Fundamentals.</td><td>K2</td><td>CO1</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the architecture of Modern Application Platforms and justify the importance of Distributed Systems.</td>
+<td>K4</td>
+<td>CO1</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Design a cloud-native application using Spring Boot, REST APIs, and WebFlux architecture.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Evaluate Polyglot Persistence architecture using NoSQL and RDBMS for enterprise applications.</td>
+<td>K5</td>
+<td>CO3</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Design service components, repositories, and API endpoints for a modern application platform.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Analyze the role of Agile methodologies in developing cloud-native applications.</td>
+<td>K4</td>
+<td>CO1</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- UNIT 2 -->
+
+<h3 class="text-primary">UNIT 2 - Full Stack Components</h3>
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain Distributed Service Communication in cloud-native environments.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss the principles of Test Driven Development (TDD).</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>3</td><td>Explain the purpose of a Technical Backlog.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>4</td><td>Describe Reactive Client-Side Technologies.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>5</td><td>Explain Build Tools and Test Automation.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>6</td><td>Discuss End-to-End Application Layering.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>7</td><td>Explain Cloud Managed Services.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>8</td><td>Describe Cloud Native Reference Architecture.</td><td>K2</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>9</td><td>Explain Architectural Prototyping in cloud-native systems.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr><td>10</td><td>Discuss Kubernetes architecture and components.</td><td>K3</td><td>CO2</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the TDD lifecycle and demonstrate its benefits in software development.</td>
+<td>K4</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate the architecture and components of a Cloud Native Reference Architecture.</td>
+<td>K5</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Design an End-to-End Application Layering model for an enterprise application.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Analyze the role of Kubernetes in cloud-native application deployment.</td>
+<td>K4</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design a Full Stack Cloud-Native Application architecture with appropriate layers.</td>
+<td>K6</td>
+<td>CO2</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+
+<!-- ==========================
+UNIT 3 - MICROSERVICES ARCHITECTURE
+========================== -->
+
+<h3 class="text-primary">UNIT 3 – Microservices Architecture</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th width="5%">Q.No</th>
+<th width="65%">Question</th>
+<th width="10%">BTL</th>
+<th width="10%">CO</th>
+<th width="10%">Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Define Domain Driven Design (DDD) and explain its significance in Microservices Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>2</td><td>Explain the concept of Bounded Context with suitable examples.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>3</td><td>Discuss the characteristics and advantages of Microservices Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain various Inter-Microservice Communication mechanisms.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>5</td><td>Describe advanced Kubernetes features used in Microservices deployment.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Service Discovery and its importance in Microservices.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>7</td><td>Discuss API Gateway Architecture and its functionalities.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>8</td><td>Explain Function-as-a-Service (FaaS) and its benefits.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>9</td><td>Describe Serverless Architecture and its applications.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain the migration process from Monolithic to Microservices Architecture.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze the principles of Domain Driven Design and Bounded Context and justify their role in Microservices implementation.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate the architecture of Microservices and compare it with Monolithic Architecture for enterprise-scale applications.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Analyze the role of Kubernetes in deploying, scaling, and managing Microservices applications.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Design a Serverless Architecture using Function-as-a-Service (FaaS) concepts for an online business application.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Evaluate various Inter-Microservice Communication patterns and recommend the most suitable pattern for a distributed cloud-native application.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================
+UNIT 4 - FUNCTIONS AND CONTAINERS
+========================== -->
+
+<h3 class="text-primary">UNIT 4 – Functions and Containers</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Compare Functions and Containers in cloud-native environments.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>2</td><td>Explain Inter-Functional Communication.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>3</td><td>Discuss Event Driven Architecture.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>4</td><td>Explain Work Queue Systems.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>5</td><td>Differentiate Event Brokers and Message Brokers.</td><td>K3</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Producer and Consumer concepts.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>7</td><td>Describe Event-Driven Processing.</td><td>K2</td><td>CO4</td><td>5</td></tr>
+
+<tr><td>8</td><td>Discuss Application Scaling techniques.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>9</td><td>Explain Data Scaling strategies.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>10</td><td>Describe Caching and Replication in distributed systems.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Evaluate Kubernetes and Kubeless architectures and recommend suitable deployment scenarios.</td>
+<td>K5</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Analyze Event Driven Architecture and design an implementation using Producers, Consumers, and Event Brokers.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Design a scalable cloud-native application architecture incorporating container orchestration and auto-scaling mechanisms.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Analyze various Data Scaling techniques including caching, sharding, and replication for enterprise applications.</td>
+<td>K4</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design an Event-Driven Processing system for a real-time financial transaction platform.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================
+UNIT 5 - CONTAINER HOSTING &
+RELIABILITY ENGINEERING
+========================== -->
+
+<h3 class="text-primary">UNIT 5 – Container Hosting and Reliability Engineering</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Explain Metrics and Monitoring in cloud-native applications.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>2</td><td>Discuss Quality Metrics for Non-Functional Requirements.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>3</td><td>Explain Distributed Tracing and its benefits.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>4</td><td>Describe Performance Engineering concepts.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>5</td><td>Discuss Security Architecture for Modern Platforms.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>6</td><td>Explain Identity and Access Management (IAM).</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>7</td><td>Describe Data Asset Classification and Protection.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>8</td><td>Explain Container Security mechanisms.</td><td>K3</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>9</td><td>Discuss Service Level Indicators (SLI).</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr><td>10</td><td>Explain Platform Reliability Engineering.</td><td>K2</td><td>CO5</td><td>5</td></tr>
+
+<tr class="table-warning">
+<td>11</td>
+<td>Analyze Performance Engineering and Distributed Tracing techniques used in cloud-native systems.</td>
+<td>K4</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>12</td>
+<td>Evaluate Security Architecture models for modern cloud-native platforms with suitable examples.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>13</td>
+<td>Analyze various Container Security mechanisms and recommend best practices for enterprise deployment.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>14</td>
+<td>Evaluate Platform Reliability Engineering practices and justify the importance of Service Level Indicators (SLI) and Service Level Objectives (SLO).</td>
+<td>K5</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+<tr class="table-warning">
+<td>15</td>
+<td>Design a secure, fault-tolerant, and highly reliable cloud-native application architecture incorporating IAM, Monitoring, Observability, and Reliability Engineering.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>10</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<h3 class="text-danger">Higher Order Thinking Questions (NBA / OBE)</h3>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-danger">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>BTL</th>
+<th>CO</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Design a cloud-native healthcare management system using Microservices, Kubernetes, and Event-Driven Architecture.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Propose a scalable architecture for an e-commerce platform supporting millions of users.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Analyze the impact of Polyglot Persistence on enterprise application performance.</td>
+<td>K4</td>
+<td>CO3</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Design a secure cloud-native banking application using IAM and Zero Trust principles.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Develop a migration strategy for converting a monolithic application into Microservices architecture.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Evaluate different scalability techniques for handling large-scale cloud workloads.</td>
+<td>K5</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Design a serverless workflow for IoT data processing and monitoring.</td>
+<td>K6</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Analyze the role of Kubernetes in implementing cloud-native best practices.</td>
+<td>K4</td>
+<td>CO4</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Propose a performance monitoring framework using Distributed Tracing and Observability tools.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Design a highly available and fault-tolerant cloud-native platform for Smart City applications.</td>
+<td>K6</td>
+<td>CO5</td>
+<td>15</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+<div id="mcq" class="cardx">
+<!-- mcq  -->
+<!-- ==========================================
+UNIT 1 - MODERN APPLICATION PLATFORMS
+========================================== -->
+
+<h3 class="text-primary">UNIT 1 – Modern Application Platforms (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th width="5%">Q.No</th>
+<th width="45%">Question</th>
+<th width="35%">Options</th>
+<th width="15%">Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Which architecture style exposes resources through HTTP methods?</td>
+<td>
+A) SOAP<br>
+B) REST<br>
+C) RPC<br>
+D) CORBA
+</td>
+<td><b>B) REST</b></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>What is the primary goal of Distributed Systems?</td>
+<td>
+A) Single machine processing<br>
+B) Data redundancy only<br>
+C) Resource sharing across multiple systems<br>
+D) Standalone execution
+</td>
+<td><b>C) Resource sharing across multiple systems</b></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Which Spring technology supports reactive programming?</td>
+<td>
+A) Spring MVC<br>
+B) Spring JDBC<br>
+C) Spring WebFlux<br>
+D) Spring Batch
+</td>
+<td><b>C) Spring WebFlux</b></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Polyglot Persistence means:</td>
+<td>
+A) Using one database<br>
+B) Using multiple databases based on requirements<br>
+C) Using only NoSQL<br>
+D) Using only SQL
+</td>
+<td><b>B) Using multiple databases based on requirements</b></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Which database is document-oriented?</td>
+<td>
+A) MySQL<br>
+B) Oracle<br>
+C) MongoDB<br>
+D) PostgreSQL
+</td>
+<td><b>C) MongoDB</b></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>User Stories are mainly used in:</td>
+<td>
+A) Waterfall Model<br>
+B) Agile Development<br>
+C) Spiral Model<br>
+D) RAD Model
+</td>
+<td><b>B) Agile Development</b></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Which annotation is commonly used for REST APIs in Spring Boot?</td>
+<td>
+A) @Service<br>
+B) @Repository<br>
+C) @RestController<br>
+D) @Bean
+</td>
+<td><b>C) @RestController</b></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Cloud Computing primarily provides:</td>
+<td>
+A) Local Storage<br>
+B) Shared Computing Resources<br>
+C) Desktop Applications<br>
+D) Offline Processing
+</td>
+<td><b>B) Shared Computing Resources</b></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Which backlog contains prioritized product features?</td>
+<td>
+A) Sprint Backlog<br>
+B) Product Backlog<br>
+C) Bug Backlog<br>
+D) Technical Backlog
+</td>
+<td><b>B) Product Backlog</b></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Asynchronous communication improves:</td>
+<td>
+A) Blocking Time<br>
+B) Scalability<br>
+C) Memory Usage Only<br>
+D) Hardware Cost
+</td>
+<td><b>B) Scalability</b></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 2 - FULL STACK COMPONENTS
+========================================== -->
+
+<h3 class="text-primary">UNIT 2 – Full Stack Components (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>TDD stands for:</td>
+<td>
+A) Technical Design Development<br>
+B) Test Driven Development<br>
+C) Testing Deployment Design<br>
+D) Tool Driven Deployment
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Which phase comes first in TDD?</td>
+<td>
+A) Refactor<br>
+B) Green<br>
+C) Red<br>
+D) Deploy
+</td>
+<td><b>C</b></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>React is mainly used for:</td>
+<td>
+A) Database Layer<br>
+B) Presentation Layer<br>
+C) Server Layer<br>
+D) Middleware
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Kubernetes is primarily used for:</td>
+<td>
+A) Data Mining<br>
+B) Container Orchestration<br>
+C) AI Training<br>
+D) Database Design
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Which architecture provides guidelines for cloud-native design?</td>
+<td>
+A) MVC<br>
+B) Cloud Native Reference Architecture<br>
+C) Waterfall<br>
+D) Client Server
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Which layer contains business logic?</td>
+<td>
+A) Data Layer<br>
+B) Presentation Layer<br>
+C) Application Layer<br>
+D) UI Layer
+</td>
+<td><b>C</b></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Git is mainly used for:</td>
+<td>
+A) Version Control<br>
+B) Networking<br>
+C) Monitoring<br>
+D) Security
+</td>
+<td><b>A</b></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Cloud Managed Services reduce:</td>
+<td>
+A) Automation<br>
+B) Operational Overhead<br>
+C) Security<br>
+D) Scalability
+</td>
+<td><b>B</b></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Which build automation tool is commonly used in Java?</td>
+<td>
+A) Maven<br>
+B) Excel<br>
+C) Photoshop<br>
+D) Wireshark
+</td>
+<td><b>A</b></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Technical Backlog mainly contains:</td>
+<td>
+A) User Stories Only<br>
+B) Infrastructure Tasks<br>
+C) Attendance Data<br>
+D) Payroll Information
+</td>
+<td><b>B</b></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 3 - MICROSERVICES ARCHITECTURE
+========================================== -->
+
+<h3 class="text-primary">UNIT 3 – Microservices Architecture (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>DDD stands for:</td><td>A) Data Driven Design<br>B) Domain Driven Design<br>C) Dynamic Design Development<br>D) Distributed Data Design</td><td><b>B</b></td></tr>
+
+<tr><td>2</td><td>Bounded Context is a concept in:</td><td>A) Scrum<br>B) Kubernetes<br>C) DDD<br>D) DevOps</td><td><b>C</b></td></tr>
+
+<tr><td>3</td><td>Which component acts as the entry point in Microservices?</td><td>A) Database<br>B) API Gateway<br>C) Load Balancer<br>D) Cache</td><td><b>B</b></td></tr>
+
+<tr><td>4</td><td>Service Discovery helps:</td><td>A) Find available services dynamically<br>B) Create databases<br>C) Manage UI<br>D) Generate reports</td><td><b>A</b></td></tr>
+
+<tr><td>5</td><td>Kubernetes Namespace provides:</td><td>A) Storage<br>B) Isolation<br>C) Security Patch<br>D) Backup</td><td><b>B</b></td></tr>
+
+<tr><td>6</td><td>FaaS stands for:</td><td>A) Function as a Service<br>B) File as a Service<br>C) Feature as a Service<br>D) Framework as a Service</td><td><b>A</b></td></tr>
+
+<tr><td>7</td><td>Serverless Computing charges based on:</td><td>A) Server Purchase<br>B) Usage<br>C) Hardware Size<br>D) CPU Type</td><td><b>B</b></td></tr>
+
+<tr><td>8</td><td>Which protocol is widely used for Microservice communication?</td><td>A) HTTP/REST<br>B) FTP<br>C) SMTP<br>D) POP3</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Microservices are:</td><td>A) Tightly Coupled<br>B) Independently Deployable<br>C) Monolithic<br>D) Static
+</td><td><b>B</b></td></tr>
+
+<tr><td>10</td><td>Eureka is commonly used for:</td><td>A) Logging<br>B) Monitoring<br>C) Service Discovery<br>D) Security</td><td><b>C</b></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 4 - FUNCTIONS AND CONTAINERS
+========================================== -->
+
+<h3 class="text-primary">UNIT 4 – Functions and Containers (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Which is event-driven and short-lived?</td><td>A) Container<br>B) Function (FaaS)<br>C) VM<br>D) Database</td><td><b>B</b></td></tr>
+
+<tr><td>2</td><td>EDA stands for:</td><td>A) Event Driven Architecture<br>B) Enterprise Data Architecture<br>C) External Data Access<br>D) Event Data Application</td><td><b>A</b></td></tr>
+
+<tr><td>3</td><td>Kafka is an example of:</td><td>A) Event Broker<br>B) Browser<br>C) Compiler<br>D) Database</td><td><b>A</b></td></tr>
+
+<tr><td>4</td><td>Producer sends:</td><td>A) Messages<br>B) Reports<br>C) Programs<br>D) Databases</td><td><b>A</b></td></tr>
+
+<tr><td>5</td><td>Consumer receives:</td><td>A) Threads<br>B) Messages<br>C) Drivers<br>D) Queries</td><td><b>B</b></td></tr>
+
+<tr><td>6</td><td>Horizontal Scaling means:</td><td>A) Add More Servers<br>B) Add More RAM<br>C) Add Storage Only<br>D) Remove Nodes</td><td><b>A</b></td></tr>
+
+<tr><td>7</td><td>Replication improves:</td><td>A) Availability<br>B) Compilation<br>C) Coding<br>D) Testing</td><td><b>A</b></td></tr>
+
+<tr><td>8</td><td>Redis is commonly used for:</td><td>A) Caching<br>B) UI Design<br>C) DNS<br>D) Backup</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Message Queue enables:</td><td>A) Synchronous Processing<br>B) Asynchronous Processing<br>C) Manual Processing<br>D) Sequential Storage</td><td><b>B</b></td></tr>
+
+<tr><td>10</td><td>Kubeless is used for:</td><td>A) Serverless Functions<br>B) Database Hosting<br>C) Logging<br>D) Monitoring</td><td><b>A</b></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<!-- ==========================================
+UNIT 5 - CONTAINER HOSTING & RELIABILITY
+========================================== -->
+
+<h3 class="text-primary">UNIT 5 – Container Hosting & Reliability Engineering (MCQ Question Bank)</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Q.No</th>
+<th>Question</th>
+<th>Options</th>
+<th>Answer</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>Prometheus is mainly used for:</td><td>A) Monitoring<br>B) Security<br>C) Development<br>D) Networking</td><td><b>A</b></td></tr>
+
+<tr><td>2</td><td>Distributed Tracing helps identify:</td><td>A) UI Issues<br>B) Bottlenecks<br>C) CSS Errors<br>D) Hardware Damage</td><td><b>B</b></td></tr>
+
+<tr><td>3</td><td>IAM stands for:</td><td>A) Identity and Access Management<br>B) Internal Access Module<br>C) Internet Access Method<br>D) Identity Allocation Management</td><td><b>A</b></td></tr>
+
+<tr><td>4</td><td>RBAC stands for:</td><td>A) Rule Based Access Control<br>B) Role Based Access Control<br>C) Resource Based Access Control<br>D) Runtime Based Access Control</td><td><b>B</b></td></tr>
+
+<tr><td>5</td><td>SLI stands for:</td><td>A) Service Level Indicator<br>B) Security Level Indicator<br>C) Software Layer Interface<br>D) Service Logic Interface</td><td><b>A</b></td></tr>
+
+<tr><td>6</td><td>SRE stands for:</td><td>A) Software Reliability Engineering<br>B) Site Reliability Engineering<br>C) Security Reliability Engineering<br>D) System Resource Engineering</td><td><b>B</b></td></tr>
+
+<tr><td>7</td><td>OAuth is used for:</td><td>A) Authorization<br>B) Caching<br>C) Monitoring<br>D) Scaling</td><td><b>A</b></td></tr>
+
+<tr><td>8</td><td>Container Security protects:</td><td>A) Containers and Workloads<br>B) UI Pages<br>C) Office Systems<br>D) Printers</td><td><b>A</b></td></tr>
+
+<tr><td>9</td><td>Observability includes:</td><td>A) Metrics<br>B) Logs<br>C) Traces<br>D) All of the Above</td><td><b>D</b></td></tr>
+
+<tr><td>10</td><td>Fault tolerance improves:</td><td>A) Reliability<br>B) Coding Speed<br>C) Storage Size<br>D) UI Design</td><td><b>A</b></td></tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<!-- mcq end -->
+
+</div>
+<div id="dd" class="cardx">
+<div class="footer">
+© 2026 CNA Student Learning Portal Design and Develop by A.N. Gnana Jeevan
+</div>
+</div>
 </div>
 
 <script>
-/* ===== IMAGE MAP ===== */
-const IMG_MAP={
-  net:'roadmap-networkengineer.png',
-  swe:'roadmay-softwareengineer.png',
-  cloud:'roadmap-cloudengineer.png',
-  sec:'roadmap-cybersecurity.png',
-  data:'pathway-DS_ML.png',
-  devops:'roadmap-devops.png',
-  dba:'roadmap-dba.png',
-  qa:'roadmap-qa.png'
-};
 
-const IMG_TITLES={
-  net:'🌐 Network Engineer Roadmap',
-  swe:'💻 Software Engineer Roadmap',
-  cloud:'☁️ Cloud Engineer Roadmap',
-  sec:'🔒 Cybersecurity Analyst Roadmap',
-  data:'📈 Data Analyst / ML Trainee Roadmap',
-  devops:'⚙️ DevOps / SRE Roadmap',
-  dba:'🗄️ Database Administrator Roadmap',
-  qa:'🧪 QA Engineer Roadmap'
-};
+document.getElementById('searchBox')
+.addEventListener('keyup', function(){
 
-function showImg(key){
-  const src=IMG_MAP[key];
-  if(!src)return;
-  const modal=document.getElementById('imgModal');
-  const img=document.getElementById('imgModalImg');
-  img.src=src;
-  img.alt=IMG_TITLES[key]||'Roadmap';
-  modal.classList.add('show');
-  document.body.style.overflow='hidden';
-  // Close sidebar on mobile
-  document.getElementById('sb').classList.remove('open');
-  document.getElementById('ov').classList.remove('sh');
-}
+let filter=this.value.toLowerCase();
 
-function closeImg(){
-  document.getElementById('imgModal').classList.remove('show');
-  document.body.style.overflow='';
-}
+document.querySelectorAll('.searchable')
+.forEach(function(section){
 
-/* ===== CURRICULUM DATA ===== */
-const CURRIC=[
-{sem:"I",code:"21MAB101T",name:"Mathematics & Calculus",nat:"Theory",pre:"—",preName:"—",post:"21MAB201T",postName:"Transforms & ODE",dom:"Mathematics"},
-{sem:"I",code:"21PCS101J",name:"Programming for Problem Solving using C",nat:"Theory + Practical",pre:"—",preName:"—",post:"21CSC302J",postName:"OOP",dom:"Programming"},
-{sem:"I",code:"21PHY102P",name:"Physics for IT",nat:"Theory + Practical",pre:"—",preName:"—",post:"21CSC403J",postName:"Computer Architecture",dom:"Electronics"},
-{sem:"I",code:"21LEM101T",name:"Professional English",nat:"Theory",pre:"—",preName:"—",post:"21LEM201T",postName:"Adv Communication",dom:"Communication"},
-{sem:"II",code:"21MAB201T",name:"Transforms & ODE",nat:"Theory",pre:"21MAB101T",preName:"Maths & Calculus",post:"21CSC501T",postName:"Machine Learning",dom:"Mathematics"},
-{sem:"II",code:"21CSC302J",name:"OOP using Java",nat:"Theory + Practical",pre:"21PCS101J",preName:"C Programming",post:"21CSC303J",postName:"Data Structures",dom:"Programming"},
-{sem:"II",code:"21CSC303J",name:"Data Structures",nat:"Theory + Practical",pre:"21CSC302J",preName:"OOP",post:"21CSC503J",postName:"DAA",dom:"Programming"},
-{sem:"II",code:"21CSC304J",name:"Digital Logic & Comp Org",nat:"Theory",pre:"21PHY102P",preName:"Physics",post:"21CSC403J",postName:"Comp Architecture",dom:"Computer Architecture"},
-{sem:"III",code:"21CSC401J",name:"DBMS",nat:"Theory + Practical",pre:"21CSC303J",preName:"Data Structures",post:"21CSC603J",postName:"Big Data Analytics",dom:"Database"},
-{sem:"III",code:"21CSC402J",name:"Operating Systems",nat:"Theory",pre:"21CSC303J",preName:"Data Structures",post:"21CSC602J",postName:"Cloud Computing",dom:"Cloud Computing"},
-{sem:"III",code:"21CSC403J",name:"Computer Architecture",nat:"Theory",pre:"21CSC304J",preName:"Digital Logic",post:"21CSC702J",postName:"Embedded Systems",dom:"Hardware"},
-{sem:"III",code:"21CSC404J",name:"Computer Networks",nat:"Theory",pre:"21CSC303J",preName:"Data Structures",post:"21CSC604J",postName:"Network Security",dom:"Networking"},
-{sem:"IV",code:"21CSC501J",name:"Design & Analysis of Algorithms",nat:"Theory",pre:"21CSC303J",preName:"Data Structures",post:"21CSC705J",postName:"Competitive Prog",dom:"Programming"},
-{sem:"IV",code:"21CSC502J",name:"Software Engineering",nat:"Theory",pre:"21CSC401J",preName:"DBMS",post:"21CSC707J",postName:"Software Project Mgmt",dom:"Software Engineering"},
-{sem:"IV",code:"21CSC503J",name:"Web Technologies",nat:"Theory + Practical",pre:"21CSC302J",preName:"OOP",post:"21CSC704J",postName:"Full Stack Dev",dom:"Web Development"},
-{sem:"IV",code:"21CSC504J",name:"Artificial Intelligence",nat:"Theory",pre:"21MAB201T",preName:"Mathematics",post:"21CSC801J",postName:"Deep Learning",dom:"Artificial Intelligence"},
-{sem:"V",code:"21CSC601J",name:"Cloud Computing",nat:"Theory + Practical",pre:"21CSC402J",preName:"OS",post:"21CSC706J",postName:"DevOps",dom:"Cloud Computing"},
-{sem:"V",code:"21CSC602J",name:"Information Security",nat:"Theory",pre:"21CSC404J",preName:"Computer Networks",post:"21CSC703J",postName:"Cyber Security",dom:"Cyber Security"},
-{sem:"V",code:"21CSC603J",name:"Big Data Analytics",nat:"Theory + Practical",pre:"21CSC401J",preName:"DBMS",post:"21CSC802J",postName:"Data Engineering",dom:"Data Science"},
-{sem:"V",code:"21CSC604J",name:"Mobile Application Dev",nat:"Theory + Practical",pre:"21CSC503J",preName:"Web Technologies",post:"21CSC803J",postName:"Cross Platform Dev",dom:"Mobile Computing"},
-{sem:"VI",code:"21CSC701J",name:"Machine Learning",nat:"Theory + Practical",pre:"21CSC504J",preName:"AI",post:"21CSC804J",postName:"Deep Learning",dom:"Artificial Intelligence"},
-{sem:"VI",code:"21CSC702J",name:"Internet of Things",nat:"Theory + Practical",pre:"21CSC404J",preName:"Computer Networks",post:"21CSC805J",postName:"Smart Systems",dom:"IoT"},
-{sem:"VI",code:"21CSC703J",name:"Cyber Security",nat:"Theory",pre:"21CSC602J",preName:"Info Security",post:"21CSC806J",postName:"Ethical Hacking",dom:"Cyber Security"},
-{sem:"VII",code:"21CSP701J",name:"Major Project Phase I",nat:"Project",pre:"—",preName:"SE, DBMS, OOP, Core",post:"21CSP801J",postName:"Major Project II",dom:"Project"},
-{sem:"VIII",code:"21CSP801J",name:"Major Project Phase II",nat:"Project",pre:"21CSP701J",preName:"Phase I",post:"—",postName:"—",dom:"Project"}
-];
+let text=section.innerText.toLowerCase();
 
-function renderCurric(filter){
-  const b=document.getElementById('cBody');
-  b.innerHTML=CURRIC.filter(r=>filter==='all'||r.dom.includes(filter)).map(r=>`<tr class="${filter!=='all'?'hl':''}"><td>${r.sem}</td><td>${r.code}</td><td>${r.name}</td><td>${r.nat}</td><td>${r.pre}</td><td>${r.preName}</td><td>${r.post}</td><td>${r.postName}</td><td><span class="p pb">${r.dom}</span></td></tr>`).join('');
-}
-renderCurric('all');
-function cF(f,btn){document.querySelectorAll('#cFlt .fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderCurric(f);}
+if(text.indexOf(filter)>-1)
+section.style.display="block";
+else
+section.style.display="none";
 
-/* ===== GAP CHART ===== */
-const GD=[{l:"Git/CI",v:30,c:"var(--org)"},{l:"Linux",v:35,c:"var(--red)"},{l:"Cloud",v:25,c:"var(--pur)"},{l:"DevOps",v:20,c:"var(--red)"},{l:"Net Labs",v:45,c:"var(--org)"},{l:"Security",v:30,c:"var(--red)"},{l:"APIs",v:40,c:"var(--org)"},{l:"Analytics",v:35,c:"var(--org)"},{l:"QA",v:25,c:"var(--red)"},{l:"DSA",v:55,c:"var(--grn)"},{l:"Placement",v:40,c:"var(--org)"}];
-function drawGap(){const e=document.getElementById('gcEl');e.innerHTML=GD.map(d=>`<div class="gr"><div class="lb">${d.l}</div><div class="bbg"><div class="bar" data-w="${d.v}" style="background:${d.c}">${d.v}%</div></div><div class="pct" style="color:${d.c}">${100-d.v}%</div></div>`).join('');requestAnimationFrame(()=>{setTimeout(()=>{e.querySelectorAll('.bar').forEach(b=>{b.style.width=b.dataset.w+'%';});},200);});}
-drawGap();
-const gO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)drawGap();});},{threshold:.3});gO.observe(document.getElementById('gcEl'));
+});
 
-/* ===== AI ADVISOR ===== */
-const AIKB={cloud:{t:"☁️ Cloud Engineer",co:"AWS, Microsoft, Accenture, Deloitte, IBM",rm:[{s:"Sem I-II",a:"C/Python, GitHub, Linux basics"},{s:"Sem III",a:"OS, CN, DSA, Linux CLI"},{s:"Sem IV",a:"DBMS, SQL, HTTP/DNS concepts"},{s:"Sem V",a:"Cloud Computing (core). AWS CCP prep. NPTEL Cloud."},{s:"Sem VI",a:"Pass AWS CCP/AZ-900. 3-tier project. Docker. Internship."},{s:"Sem VII",a:"AWS SAA / AZ-104. Terraform. Mock interviews."},{s:"Sem VIII",a:"Cloud major project. Internship."}],ce:["AWS CCP","AWS SAA","AZ-900","AZ-104","Google ACE"],img:"cloud"},
-net:{t:"🌐 Network Engineer",co:"Cisco, HCL, TCS, Airtel, Jio",rm:[{s:"Sem I-II",a:"C/Python, GitHub, aptitude"},{s:"Sem III",a:"CN (core), OS, Linux networking"},{s:"Sem IV",a:"Algorithms, TCP/IP, OSI"},{s:"Sem V",a:"Info Security. CCNA prep. Packet Tracer. NPTEL CN."},{s:"Sem VI",a:"CCNA/Network+. VLAN project. Wireshark. Internship."},{s:"Sem VII",a:"SDN elective. Mock interviews. Apply Cisco, Airtel."},{s:"Sem VIII",a:"Enterprise network major project. NOC internship."}],ce:["CCNA","Network+","JNCIA","Fortinet NSE"],img:"net"},
-sec:{t:"🔒 Cybersecurity Analyst",co:"IBM, Deloitte, EY, Palo Alto, TCS",rm:[{s:"Sem I-II",a:"C/Python, GitHub, Linux"},{s:"Sem III",a:"OS, CN, Linux permissions"},{s:"Sem IV",a:"DBMS (SQL injection). TryHackMe."},{s:"Sem V",a:"Info Security (core). Security+/ISC2 CC prep. OWASP."},{s:"Sem VI",a:"Cyber Security (core). Pass cert. SIEM project. Internship."},{s:"Sem VII",a:"HackTheBox. Mock interviews. Apply Deloitte, EY."},{s:"Sem VIII",a:"Security assessment major project."}],ce:["ISC2 CC","Security+","SC-900","CEH"],img:"sec"},
-data:{t:"📈 Data Analyst / ML",co:"Mu Sigma, Fractal, TCS, Amazon",rm:[{s:"Sem I-II",a:"C/Python, aptitude, statistics"},{s:"Sem III",a:"DBMS + SQL mastery. pandas/numpy."},{s:"Sem IV",a:"AI basics. SQL analytics. Excel."},{s:"Sem V",a:"Big Data (core). Google DA cert start. NPTEL ML."},{s:"Sem VI",a:"ML (core). Complete cert. Power BI project. Internship."},{s:"Sem VII",a:"NLP, Deep Learning. Mock interviews."},{s:"Sem VIII",a:"ML pipeline major project."}],ce:["Google DA","PL-300","IBM Data Analyst","TensorFlow"],img:"data"},
-devops:{t:"⚙️ DevOps / SRE",co:"Accenture, IBM, TCS, Thoughtworks",rm:[{s:"Sem I-II",a:"C/Python, GitHub (branching), Linux"},{s:"Sem III",a:"OS, DSA, shell scripting"},{s:"Sem IV",a:"DBMS, Algorithms. Docker basics."},{s:"Sem V",a:"Cloud (core). Git advanced. CI/CD. NPTEL Cloud."},{s:"Sem VI",a:"AWS CCP. CI/CD project. Docker Compose. K8s. Internship."},{s:"Sem VII",a:"Terraform. K8s project. Mock interviews."},{s:"Sem VIII",a:"Full DevOps pipeline major project."}],ce:["AWS CCP→SAA","AZ-900","Terraform","CKA"],img:"devops"},
-swe:{t:"💻 Software Engineer",co:"TCS, Zoho, Freshworks, Amazon, Microsoft",rm:[{s:"Sem I-II",a:"C/Java/OOP, GitHub, HTML/CSS"},{s:"Sem III",a:"DSA (200+ problems), DBMS, OS"},{s:"Sem IV",a:"Algorithms, SE, Web Tech. React/Angular."},{s:"Sem V",a:"REST API with Node/Spring. NPTEL Java."},{s:"Sem VI",a:"Oracle Java / Meta cert. MERN project. Internship."},{s:"Sem VII",a:"Testing, CI/CD. LeetCode 300+. Mock interviews."},{s:"Sem VIII",a:"Production full-stack major project."}],ce:["Oracle Java","Meta Front-End","MongoDB","GitHub Found."],img:"swe"},
-dba:{t:"🗄️ DBA / Data Engineer",co:"Oracle, IBM, TCS, Banks",rm:[{s:"Sem I-II",a:"C/Python, file systems"},{s:"Sem III",a:"DBMS (core). SQL mastery. OS."},{s:"Sem IV",a:"Algorithms, SE, advanced SQL"},{s:"Sem V",a:"Big Data (core). MongoDB. NPTEL DBMS."},{s:"Sem VI",a:"Oracle DB / MongoDB cert. ETL project. Internship."},{s:"Sem VII",a:"Data warehouse project. Mock interviews."},{s:"Sem VIII",a:"Database/ETL major project."}],ce:["Oracle DB SQL","MongoDB Associate","DP-900"],img:"dba"},
-qa:{t:"🧪 QA Engineer",co:"Infosys, Cognizant, Wipro, TCS, Zoho",rm:[{s:"Sem I-II",a:"C/Java, GitHub, software lifecycle"},{s:"Sem III",a:"DBMS, OS, lifecycle concepts"},{s:"Sem IV",a:"SE (core). SDLC/STLC. Selenium IDE."},{s:"Sem V",a:"Manual testing. Selenium WebDriver."},{s:"Sem VI",a:"ISTQB. Selenium project. Postman. QA internship."},{s:"Sem VII",a:"Automation framework. CI integration. Mocks."},{s:"Sem VIII",a:"Automated test suite major project."}],ce:["ISTQB","Postman Expert","Selenium"],img:"qa"},
-gate:{t:"🏛️ ISRO / GATE",co:"ISRO, DRDO, NIC, PSUs",rm:[{s:"Sem I-II",a:"Strong academics, Maths, Programming"},{s:"Sem III",a:"DSA, OS, DBMS, CN, COA — GATE core"},{s:"Sem IV",a:"Algorithms, AI, Probability. GATE PYQs."},{s:"Sem V",a:"TOC, Discrete Maths. Serious GATE prep. NPTEL."},{s:"Sem VI",a:"Intensive GATE. Test series. 2 mocks/week."},{s:"Sem VII",a:"GATE exam (Feb). Apply ISRO direct."},{s:"Sem VIII",a:"GATE counseling → ISRO/DRDO/PSU."}],ce:["GATE CS","NPTEL Elite/Gold"],img:null}
-};
-const ALIAS={cloud:'cloud',aws:'cloud',amazon:'cloud',azure:'cloud',network:'net',cisco:'net',ccna:'net',cyber:'sec',security:'sec',soc:'sec',deloitte:'sec',data:'data',ml:'data',ai:'data','mu sigma':'data',analyst:'data',devops:'devops',sre:'devops',docker:'devops',software:'swe','full stack':'swe',fullstack:'swe',zoho:'swe',developer:'swe',react:'swe',java:'swe',dba:'dba',database:'dba',oracle:'dba',mongodb:'dba',qa:'qa',test:'qa',selenium:'qa',automation:'qa',isro:'gate',gate:'gate',drdo:'gate',govt:'gate',ibps:'gate'};
+});
 
-function qk(el){document.getElementById('aiIn').value=el.textContent;runAI();}
-function runAI(){
-  const q=document.getElementById('aiIn').value.toLowerCase().trim();
-  if(!q){alert('Please type a career question.');return;}
-  let key=null;
-  for(const k of Object.keys(ALIAS)){if(q.includes(k)){key=ALIAS[k];break;}}
-  const box=document.getElementById('aiO');
-  if(!key||!AIKB[key]){box.style.display='block';box.innerHTML=`<h3>🤖 AI Advisor</h3><p>No match for "${q}". Try: Cloud, Network, Cybersecurity, Data, DevOps, Software, QA, DBA, ISRO.</p>`;return;}
-  const r=AIKB[key];
-  let h=`<h3 style="margin-bottom:8px">🤖 ${r.t}</h3><p style="margin-bottom:10px"><b>Companies:</b> ${r.co}</p>`;
-  h+=`<div style="position:relative;padding-left:26px;margin:12px 0"><div style="position:absolute;left:7px;top:4px;bottom:4px;width:3px;background:linear-gradient(var(--pri),var(--acc),var(--grn));border-radius:4px"></div>`;
-  r.rm.forEach(s=>{h+=`<div style="position:relative;margin-bottom:10px;background:var(--pnl);border:1px solid var(--brd);border-radius:12px;padding:11px"><div style="position:absolute;left:-24px;top:13px;width:11px;height:11px;background:var(--pri);border:3px solid var(--pnl);border-radius:50%;box-shadow:0 0 0 2px #bfdbfe"></div><b>${s.s}:</b> ${s.a}</div>`;});
-  h+=`</div>`;
-  h+=`<p><b>🏅 Certs:</b> ${r.ce.map(c=>`<span class="p pb" style="margin:2px">${c}</span>`).join(' ')}</p>`;
-  if(r.img){h+=`<p style="margin-top:10px"><button class="btn bp bsm" onclick="showImg('${r.img}')">📷 View Full Roadmap Infographic →</button></p>`;}
-  box.style.display='block';box.innerHTML=h;box.scrollIntoView({behavior:'smooth',block:'start'});
-}
-
-/* ===== ROADMAP FILTER ===== */
-function vrF(r,btn){document.querySelectorAll('#vF .fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.vs').forEach(s=>{const d=s.dataset.r||'all';s.style.display=(r==='all'||d.includes('all')||d.includes(r))?'block':'none';});document.querySelectorAll('.sg .cd').forEach(c=>{const d=c.dataset.r||'';c.style.display=(r==='all'||d.includes(r))?'block':'none';});}
-
-/* ===== SIDEBAR ===== */
-function togSB(){document.getElementById('sb').classList.toggle('open');document.getElementById('ov').classList.toggle('sh');}
-function nav(el){document.querySelectorAll('.sb-n a').forEach(a=>a.classList.remove('on'));el.classList.add('on');document.getElementById('sb').classList.remove('open');document.getElementById('ov').classList.remove('sh');}
-
-/* ===== DARK MODE ===== */
-function togDark(){document.body.classList.toggle('dark');localStorage.setItem('dk',document.body.classList.contains('dark')?'1':'0');}
-if(localStorage.getItem('dk')==='1')document.body.classList.add('dark');
-
-/* ===== KEYBOARD ===== */
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeImg();closeModal();}});
-
-/* ===== MODAL (unused but kept for compatibility) ===== */
-function closeModal(){document.getElementById('modalBg').classList.remove('show');document.body.style.overflow='';}
 </script>
+
 </body>
 </html>
